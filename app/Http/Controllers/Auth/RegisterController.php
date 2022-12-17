@@ -53,6 +53,16 @@ class RegisterController extends Controller
             'mail' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:4|confirmed',
         ]);
+        $this->validate($request,$rules);
+        if($validater->fails()){
+            return redirect()->back()
+            ->withInput()
+            ->withErrors($validater);
+        }
+            else{
+                return view('added');
+            }
+        
     }
 
     /**
@@ -75,17 +85,22 @@ class RegisterController extends Controller
     //     return view("auth.register");
     // }
 
-    public function register(Request $request){
-        if($request->isMethod('post')){
-            $data = $request->input();
-
-            $this->create($data);
-            return redirect('added');
+    public function register(Request $request){//データを受け取る
+        if($request->isMethod('post')){//ismethod引数に指定した文字列とHTTP動詞が一致するか判定する
+            $data = $request->input();//値を取得できる
+            $request->validate ([
+                'username' => 'required|string|max:255',
+                'mail' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:4|confirmed']);
+            $this->validater($data);
+            $this->create($data);//値を保存する
+            $user = $request->get('username');//値を取得する
+            return redirect('added')->with('username',$user);//withメソッドを使いセッションに値を入れる
         }
         return view('auth.register');
     }
 
-    public function added(){
+    public function added(){   
         return view('auth.added');
     }
 }
