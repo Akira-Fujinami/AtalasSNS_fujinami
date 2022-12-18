@@ -88,7 +88,7 @@ class RegisterController extends Controller
     public function register(Request $request){//データを受け取る
         if($request->isMethod('post')){//ismethod引数に指定した文字列とHTTP動詞が一致するか判定する
             $data = $request->input();//値を取得できる
-            $request->validate ([
+            $request->validate ([//バリデーションを行う
                 'username' => 'required|string|max:255',
                 'mail' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:4|confirmed']);

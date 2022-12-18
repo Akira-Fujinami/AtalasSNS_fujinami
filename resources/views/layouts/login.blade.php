@@ -22,6 +22,9 @@
 <body>
     <header>
         <div id = "head">
+            <ul>
+        <li><a href="/top"><img src="images/atlas.png"></a></li></div>
+</header>
         <h1><a><img src="images/logo.png"></a></h1>
             <div id="">
                 <div id="">
@@ -32,9 +35,9 @@
                     <li><a href="/profile">プロフィール</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
-            </div>
+            
         </div>
-    </header>
+    
     <div id="row">
         <div id="container">
             @yield('content')
