@@ -33,7 +33,7 @@ Route::post('/added', 'Auth\RegisterController@added');
 Route::group(['middleware' => 'auth'],function(){//新規登録していないとログインできない
 Route::get('/top','PostsController@index');
 
-Route::get('/login', 'Auth\LoginController@logout');
+Route::get('/logout','Auth\LoginController@Logout');
 
 Route::get('/profile','UsersController@profile');
 
