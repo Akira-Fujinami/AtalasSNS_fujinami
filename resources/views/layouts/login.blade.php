@@ -23,18 +23,27 @@
     <header>
         <div id = "head">
             <ul>
-        <li><a href="/top"><img src="images/atlas.png"></a></li></div>
+        <p><a href="/top"><img src="images/atlas.png"></a></li></div>
+<div class="accordion">
+    <dl><dt></dt>
+<nav class="menu">
+    <ul>
+        <li><a href="/top">HOME</a></li>
+        <li><a href="/profile">プロフィール編集</a></li>
+        <li><a href="/login">ログアウト</a></li>
+</ul></dl>
+</nav></div>
 </header>
         <h1><a><img src="images/logo.png"></a></h1>
             <div id="">
                 <div id="">
                     <p>〇〇さん<img src="images/arrow.png"></p>
                 <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/logout">ログアウト</a></li>
-                </ul>
+                <div>
+                    <p><a href="/top">ホーム</a></p>
+                    <p><a href="/profile">プロフィール</a></p>
+                    <p><a href="/logout">ログアウト</a></p>
+</div>
             
         </div>
     
@@ -61,7 +70,7 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>

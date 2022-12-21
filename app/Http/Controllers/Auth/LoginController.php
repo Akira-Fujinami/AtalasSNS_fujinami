@@ -51,4 +51,7 @@ class LoginController extends Controller
         }
         return view("auth.login");
     }
+    protected function logOut(Request $request) {
+        return redirect('login');
+      }
 }

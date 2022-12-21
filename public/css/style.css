@@ -20,3 +20,33 @@ header{
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
+dt{
+    display:flex;
+    align-items: center;
+    padding:10px 0;
+    cursor:pointer;
+    position:relative;
+}
+li{
+    text-align: right;
+}
+dt:after{
+    content:"";
+    position:absolute;
+    right:10px;
+    top:50%;
+    transition:0.2s;
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-top:solid 2px;
+    border-right:solid 2px;
+    -webkit-transform:rotate(135deg) translateY(50%);
+    transform: rotate(135deg) translateY(50%);
+}
+.open:after{
+    -webkit-transform: rotate(-45deg);
+    transform:rotate(-45deg);
+    top:50%;
+}
+
