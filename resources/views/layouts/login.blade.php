@@ -31,21 +31,10 @@
         <li><a href="/top">HOME</a></li>
         <li><a href="/profile">プロフィール編集</a></li>
         <li><a href="/logout">ログアウト</a></li>
+        </li>
 </ul></dl>
 </nav></div>
 </header>
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
-                <div>
-                    <p><a href="/top">ホーム</a></p>
-                    <p><a href="/profile">プロフィール</a></p>
-                    <p><a href="/logout">ログアウト</a></p>
-</div>
-            
-        </div>
     
     <div id="row">
         <div id="container">
@@ -53,7 +42,7 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>〇〇さんの</p>
+                <p>{{session('username')}}さんの</p>
                 <div>
                 <p>フォロー数</p>
                 <p>〇〇名</p>
