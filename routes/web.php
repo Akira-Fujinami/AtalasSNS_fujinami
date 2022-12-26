@@ -31,10 +31,10 @@ Route::post('/added', 'Auth\RegisterController@added');
 
 
 //ログイン中のページ
+Route::get('/logout','Auth\LoginController@Logout');
+
 Route::group(['middleware' => 'auth'],function(){//新規登録していないとログインできない
 Route::get('/top','PostsController@index');
-
-Route::post('/login','Auth\LoginController@Logout');
 
 Route::get('/profile','UsersController@profile');
 
@@ -43,4 +43,3 @@ Route::get('/search','UsersController@index');
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');
 });
-
