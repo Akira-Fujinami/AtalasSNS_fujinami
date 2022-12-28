@@ -46,24 +46,24 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'username' => 'required|string|max:255',
-            'mail' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:4|confirmed',
-        ]);
-        $this->validate($request,$rules);
-        if($validater->fails()){
-            return redirect()->back()
-            ->withInput()
-            ->withErrors($validater);
-        }
-            else{
-                return view('added');
-            }
+    //protected function validator(array $data)
+    //{
+       // return Validator::make($data, [
+          //  'username' => 'required|string|max:255',
+           // 'mail' => 'required|string|email|max:255|unique:users',
+           // 'password' => 'required|string|min:4|confirmed',
+        //]);
+       // $this->validate($request,$rules);
+        //if($validater->fails()){
+           // return redirect()->back()
+           // ->withInput()
+           // ->withErrors($validater);
+        //}
+           // else{
+           //     return view('added');
+           // }
         
-    }
+    //}
 
     /**
      * Create a new user instance after a valid registration.
@@ -88,11 +88,11 @@ class RegisterController extends Controller
     public function register(Request $request){//データを受け取る
         if($request->isMethod('post')){//ismethod引数に指定した文字列とHTTP動詞が一致するか判定する
             $data = $request->input();//値を取得できる
-            $request->validate ([//バリデーションを行う
+            $this->validate($request,[//バリデーションを行う
                 'username' => 'required|string|max:255',
                 'mail' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:4|confirmed']);
-            $this->validater($data);
+                'password' => 'required|string|min:4|confirmed',//confirmedは最初に書く
+                'password_confirmation' => 'required|string|min:4']);//名前_confirmation
             $this->create($data);//値を保存する
             $user = $request->get('username');//値を取得する
             return redirect('added')->with('username',$user);//withメソッドを使いセッションに値を入れる

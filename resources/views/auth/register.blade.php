@@ -8,15 +8,43 @@
 
 {{ Form::label('ユーザー名') }}
 {{ Form::text('username',null,['class' => 'input']) }}
+</div>
+		@if($errors->has('username'))
+			@foreach($errors->get('username') as $message)
+				{{ $message }}<br>
+			@endforeach
+		@endif 
+    <div>
 
 {{ Form::label('メールアドレス') }}
 {{ Form::text('mail',null,['class' => 'input']) }}
+</div>
+		@if($errors->has('mail'))
+			@foreach($errors->get('mail') as $message)
+				{{ $message }}<br>
+			@endforeach
+		@endif 
+    <div>
 
 {{ Form::label('パスワード') }}
 {{ Form::text('password',null,['class' => 'input']) }}
+</div>
+		@if($errors->has('password'))
+			@foreach($errors->get('password') as $message)
+				{{ $message }}<br>
+			@endforeach
+		@endif 
+    <div>
 
 {{ Form::label('パスワード確認') }}
-{{ Form::text('password-confirm',null,['class' => 'input']) }}
+{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+</div>
+		@if($errors->has('password_confirmation'))
+			@foreach($errors->get('password_confirmation') as $message)
+				{{ $message }}<br>
+			@endforeach
+		@endif 
+    <div>
 
 {{ Form::submit('登録') }}
 
