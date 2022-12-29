@@ -6,8 +6,6 @@
     });
 })
 
-
-
 $(function(){
   // 編集ボタン(class="js-modal-open")が押されたら発火
   $('.js-modal-open').on('click',function(){

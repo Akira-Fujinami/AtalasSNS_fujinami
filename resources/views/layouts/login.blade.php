@@ -24,7 +24,7 @@
         <div id = "head">
             <ul>
         <p><a href="/top"><img src="images/atlas.png"></a></li></div>
-<div class="accordion">
+<div class="c">
     <dl><dt></dt>
 <nav class="menu">
     <ul>
@@ -32,7 +32,7 @@
         <li><a href="/profile">プロフィール編集</a></li>
         <li><a href="/logout">ログアウト</a></li>
         </li>
-</ul></dl>
+    </ul></dl>
 </nav></div>
 </header>
     

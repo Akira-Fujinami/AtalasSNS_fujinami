@@ -35,7 +35,7 @@
         {!! Form::close() !!}
                 {{ csrf_field() }}
            </form>
-           <a class="js-modal-close" href="/top">閉じる</a>
+           <a class="js-modal-close" href="/top"></a>
         </div>
     </div>
 </tr>
