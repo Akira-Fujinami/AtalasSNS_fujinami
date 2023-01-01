@@ -10,4 +10,8 @@ class Post extends Model
     protected $fillable = [
         'post','user_id'
     ];
+    public function Users()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }

@@ -9,6 +9,10 @@ class Follow extends Model
     protected $fillable = [
         'following_id', 'followed_id'
       ];
+      protected $primaryKey = [
+        'following_id',
+        'followed_id'
+        ];
     
       public function getFollowCount($user_id)
       {

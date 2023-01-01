@@ -21,27 +21,31 @@
 </head>
 <body>
     <header>
+        <div class="container">
         <div id = "head">
-            <ul>
-        <p><a href="/top"><img src="images/atlas.png"></a></li></div>
-<div class="c">
-    <dl><dt></dt>
+        <p class="atlas"><a href="/top"><img src="images/atlas.png"></a></div>
+        <div class="username">
+        <p class="icon1"><img src="images/icon1.png"></p>
+        <div class="accordion">
+    <dl><dt></dt></div>
+        {{Auth::user()->username}}さん</div>
+</header>
 <nav class="menu">
-    <ul>
+    <ul class="right">
         <li><a href="/top">HOME</a></li>
         <li><a href="/profile">プロフィール編集</a></li>
         <li><a href="/logout">ログアウト</a></li>
         </li>
     </ul></dl>
 </nav></div>
-</header>
+
     
     <div id="row">
         <div id="container">
             @yield('content')
         </div >
         <div id="side-bar">
-            <div id="confirm">
+            <div id="confirm"class="side-bar">
                 <p>さんの</p>
                 <div>
                 <p>フォロー数</p>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
+use App\Follow;
 
 class FollowsController extends Controller
 {
@@ -22,6 +25,23 @@ class FollowsController extends Controller
             'follower_count' => $follower_count
         ]);
     }
+    public function follow(User $search){
+        $follower=auth()->user();//全てのユーザー
+        $is_following=$follower->isFollowing($search->id);//フォローしているか
+        if(!$is_following){//フォローしていなかったらフォローする
+            $follower->follow($search->id);
+            return redirect('/search');
+        }
+    }
+
+    public function unfollow(User $search){
+        $follower=auth()->user();//全てのユーザー
+        $is_following=$follower->isFollowing($search->id);//フォローしているか
+        if($is_following){//フォローしてたらフォローする
+            $follower->unfollow($search->id); 
+        }
+        return redirect('/search');
+    }
     //
     public function followList(){
         return view('follows.followList');
@@ -29,4 +49,5 @@ class FollowsController extends Controller
     public function followerList(){
         return view('follows.followerList');
     }
+
 }

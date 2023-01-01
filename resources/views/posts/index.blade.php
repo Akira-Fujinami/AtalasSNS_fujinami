@@ -2,27 +2,31 @@
 
 @section('content')
 <div class="container">
-    {!!Form::open(['url' => '/post'])!!}
-<div class="post">
-<p><img src="images/post.png"></p>
-</div>
-<div class="my-icon">
-    <h5><img src="images/icon1.png"></h5></div>
+<form action="{{url('/post')}}" method="POST">
+    @csrf
+<div class="my-icon"></div>
 </div>
 <div class="form-group">
-{!!Form::input('text','newPost','',['required','class'=>'form-control','placeholder'=>'投稿内容を入力してください。'])!!}
-<button type="submit" class="btn btn-success pull-right"><img src="images/post.png"></button>
+<input type="text" class="text1" name="newPost" required placeholder="投稿内容を入力してください。">
+<input type="image" class="post" src="images/post.png">
+</form>
+</div>
+<div id="top-bar">
 </div>
 {!!Form::close()!!}
 @foreach ($list as $list)
-<div>
+<div class="posting">
 <tr>
-<td>{{ $list->post }}</td>
+<td class="post-username">{{Auth::user()->username}}</td>
 <td>{{$list->created_at}}</td>
-<td><a class="btn btn-danger" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a></td>
+</tr>
+<div>
+{{ $list->post }}
+<a class="btn btn-danger" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
         <!-- 投稿の編集ボタン -->
-        <td><a class="js-modal-open" href="/top/{{$list->id}}/" post="{{ $list->post }}" id="{{ $list->id }}"><img src="images/edit.png"></a></td>
-   <!-- モーダルの中身 -->
+        <a class="js-modal-open" href="/top/{{$list->id}}/" post="{{ $list->post }}" id="{{ $list->id }}"><img src="images/edit.png"></a></div>
+        <div id="center-bar"></div>
+        <!-- モーダルの中身 -->
     <div class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
         <div class="modal__content">
@@ -31,7 +35,7 @@
             {!! Form::hidden('id', $list->id) !!}
             {!! Form::input('text', 'upPost', $list->post, ['required', 'class' => 'form-control']) !!}
         </div>
-        <button type="submit" class="btn btn-success pull-right"><img src="images/edit.png"></button>
+        <input type="image" class="update" src="images/edit.png">
         {!! Form::close() !!}
                 {{ csrf_field() }}
            </form>

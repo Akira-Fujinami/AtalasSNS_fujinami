@@ -1,8 +1,9 @@
 
-    $(function(){$('.accordion dl li').hide();
-    $('.accordion dl dt').click(function() {
-      $(this).toggleClass('open');
-      $('.accordion dl li').slideToggle('normal');
+    $(function(){$('.menu li').hide();
+    $('.accordion dl dt').click(function(e) {
+      $('.accordion dl dt').toggleClass("open");
+      $('.side-bar').hide();
+      $('.menu li').show();
     });
 })
 
