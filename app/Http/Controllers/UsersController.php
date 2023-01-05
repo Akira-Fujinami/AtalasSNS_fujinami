@@ -32,12 +32,18 @@ class UsersController extends Controller
             'upbio' => 'string|max:150',
             'upPW' => 'required|string|min:4|confirmed',//confirmedは最初に書く
             'upPW_confirmation' => 'required|string|min:4']);//名前_confirmation
+                   $this->validate($request,$rules);
+        if($validater->fails()){
+           return redirect()->back()
+            ->withInput()
+            ->withErrors($validater);
+        }
         User::where('id',$id)->update([
             'username'=>$up_name,
             'mail'=>$up_mail,
             'bio'=>$up_bio,
             'password'=>$up_PW,$up_PW_confirmation,
-        ]);$this->create($data);//値を保存する
+        ]);
         return redirect('/profile');
     }
     public function createProfile(Request $request){

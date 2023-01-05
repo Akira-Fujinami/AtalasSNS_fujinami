@@ -2,4 +2,6 @@
 
 @section('content')
 
+<div id="top-bar-followlist">
+</div>
 @endsection

@@ -24,12 +24,12 @@
         <div class="container">
         <div id = "head">
         <p class="atlas"><a href="/top"><img src="images/atlas.png"></a></div>
-        <div class="username">
-        <p class="icon1"><img src="images/icon1.png"></p>
+        <div class="header-menu">
+        <div class="login-user">{{Auth::user()->username}}     さん</div>
         <div class="accordion">
-    <dl><dt></dt></div>
-        {{Auth::user()->username}}さん</div>
-</header>
+            <div class="login-icon"><img src="images/icon1.png"></div>
+    <dl><dt></dt></div></div>
+    </header>
 <nav class="menu">
     <ul class="right">
         <li><a href="/top">HOME</a></li>
@@ -46,19 +46,21 @@
         </div >
         <div id="side-bar">
             <div id="confirm"class="side-bar">
-                <p>さんの</p>
+                <h6 class="username6">{{Auth::user()->username}}さんの</p>
                 <div>
-                <p>フォロー数</p>
-                <p>〇〇名</p>
+                    <div class="follow">
+                <div class="follow-number">フォロー数</div>
+                <div class="number">〇〇名</div></div>
                 </div>
-                <p class="btn"><a href="followList">フォローリスト</a></p>
-                <div>
-                <p>フォロワー数</p>
-                <p>〇〇名</p>
-                </div>
-                <p class="btn"><a href="followerList">フォロワーリスト</a></p>
+                <input type="button" class="btn-follow" onclick="location.href='http://127.0.0.1:8000/followList' "value="フォローリスト">
+                <div class="follow">
+                <div class="follow-number">フォロー数</div>
+                <div class="number">〇〇名</div></div>
+                
+                <input type="button" class="btn-follower" onclick="location.href='http://127.0.0.1:8000/followerList' "value="フォロワーリスト">
             </div>
-            <input type="button" onclick="location.href='http://127.0.0.1:8000/search'"value=ユーザー検索>
+            <div id="side-center-bar"></div>
+            <input type="button" class="search" onclick="location.href='http://127.0.0.1:8000/search'"value=ユーザー検索>
         </div>
     </div>
     <footer>

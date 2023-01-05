@@ -49,11 +49,12 @@ Route::get('/follow/{id}','Followscontroller@follow');
 Route::get('/unfollow/{id}','Followscontroller@unfollow');
 
 Route::get('/profile','UsersController@profile');
+Route::get('/profile/update','Userscontroller@updateProfile');
 Route::post('/profile/update','Userscontroller@updateProfile');
 Route::post('/profile/create','UsersController@createProfile');
 
 Route::get('/show','FollowsContoroller@show');
 
-Route::get('/follow-list','PostsController@index');
-Route::get('/follower-list','PostsController@index');
+Route::get('/followList','FollowsController@followlist');
+Route::get('/followerList','FollowsController@followerlist');
 });

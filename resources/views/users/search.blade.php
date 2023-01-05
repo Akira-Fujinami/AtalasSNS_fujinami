@@ -1,15 +1,20 @@
 @extends('layouts.login')
 @section('content')
 {!! Form::open(['url' => '/search']) !!}
-{!!Form::input('text','search','',['class'=>'form-control','placeholder'=>'ユーザー名'])!!}
-<button type="submit" class="btn btn-success pull-right"><img src="images/post.png"></button>
+{!!Form::input('text','search','',['class'=>'search-username','placeholder'=>'ユーザー名'])!!}
+<input type="image" class="search-image" src="images/post.png">
+@if(!empty($result))
+<span class="search-word">検索ワード：{{$result}}</span>
+@endif
 {!!Form::close()!!}
 {{session('result')}}
+<div id="top-bar">
+</div>
 @foreach ($search as $search)
-<div>
+<div class="searching">
 {{ $search->username }}
-<p class="follow-btn"><a href="/follow/{{$search->id}}">フォロー</a></p>
-<p class="follow-btn"><a href="/unfollow/{{$search->id}}">フォロー解除</a></p>
+<input type="button" class="btn-follow" onclick="location.href='http://127.0.0.1:8000/follow/{id}' "value="フォローする">
+<input type="button" class="btn-unfollow" onclick="location.href='http://127.0.0.1:8000//unfollow/{id}' "value="フォロー解除">
 </div>
 @endforeach
 @endsection

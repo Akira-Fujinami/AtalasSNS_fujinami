@@ -33,7 +33,7 @@
         {!! Form::open(['url' => '/post/update']) !!}
         <div class="form-group">
             {!! Form::hidden('id', $list->id) !!}
-            {!! Form::input('text', 'upPost', $list->post, ['required', 'class' => 'form-control']) !!}
+            {!! Form::input('text', 'upPost', $list->post, ['required', 'class' => 'text2']) !!}
         </div>
         <input type="image" class="update" src="images/edit.png">
         {!! Form::close() !!}
