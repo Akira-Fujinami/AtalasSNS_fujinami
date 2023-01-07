@@ -40,7 +40,7 @@ class UsersController extends Controller
             'mail'=>$up_mail,
             'bio'=>$up_bio,
             'password'=>$up_PW,
-            'image'=>basement($image)
+            'images'=>$image,
         ]);
         return redirect('/profile');
     }

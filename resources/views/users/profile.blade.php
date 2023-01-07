@@ -1,7 +1,11 @@
 @extends('layouts.login')
 
 @section('content')
+@if(Auth::user()->images == null)
+<img src="images/icon1.png">
+@else
 <img src="{{asset('storage/'.Auth::user()->images)}}">
+@endif
 <form action="{{url('/profile/update')}}" method="post" enctype="multipart/form-data">
 @csrf
 <ol>
