@@ -20,24 +20,29 @@ class UsersController extends Controller
         return view('users.profile',['user'=>$user]);
     }
     public function updateProfile(Request $request){
-        $id=$request->input('id');
+        $id=Auth::id();
         $up_name=$request->input('upname');
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $up_PW_confirmation=$request->input('upPW_confirmation');
+        $image=$request->file('image')->getClientOriginalName();
+        $image->store('public/images');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
-            'mail' => 'required|string|email|max:255|unique:users',
+            'upmail' => 'required|string|email|max:255',
             'upbio' => 'string|max:150',
             'upPW' => 'required|string|min:4|confirmed',//confirmedは最初に書く
-            'upPW_confirmation' => 'required|string|min:4']);//名前_confirmation
+            'upPW_confirmation' => 'required|string|min:4',//名前_confirmation
+            'image'=>'image|mimes:jpeg,png,jpg,gif']);
+            if($image !=null){
+            };
         User::where('id',$id)->update([
             'username'=>$up_name,
             'mail'=>$up_mail,
             'bio'=>$up_bio,
-            'password'=>$up_PW,$up_PW_confirmation,
-        ]);$this->create($data);//値を保存する
+            'password'=>$up_PW,
+            'image'=>basement($image)
+        ]);
         return redirect('/profile');
     }
     public function search(){
