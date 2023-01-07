@@ -25,7 +25,6 @@ class UsersController extends Controller
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $image=$request->image->store('public/images');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
             'upmail' => 'required|string|email|max:255',
@@ -35,6 +34,7 @@ class UsersController extends Controller
             'image'=>'image|mimes:jpeg,png,jpg,gif']);
             if($image !=null){
             };
+            $image=$request->image->store('public/images');
         User::where('id',$id)->update([
             'username'=>$up_name,
             'mail'=>$up_mail,
