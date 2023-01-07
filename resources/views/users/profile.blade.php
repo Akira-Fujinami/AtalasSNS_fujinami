@@ -36,7 +36,7 @@
 		@endif 
 </dd>
 <dd>icon image<input type="file" name="image"></dd>
-<img src="{{asset('storage/'.$user->image)}}">
+<img src="{{asset('storage/'.Auth::user()->images)}}">
 <button type="submit" class="btn-update">更新</button>
 </form>
 @endsection
