@@ -1,7 +1,6 @@
 @extends('layouts.login')
 
 @section('content')
-@foreach ($user as $user)
 <form action="{{url('/profile/update')}}" method="post">
 @csrf
 <ol>
@@ -12,7 +11,7 @@
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd>mail address<input type="text" name="upmail" value="{{ old('upname',  Auth::user()->mail) }}"></dd>
+<dd>mail address<input type="text" name="upmail" value="{{ old('upmail',  Auth::user()->mail) }}"></dd>
 @if($errors->has('upmail'))
 			@foreach($errors->get('upmail') as $message)
 				{{ $message }}<br>
@@ -30,7 +29,7 @@
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd>bio<input type="text" name="upbio" value="{{ old('upname',  Auth::user()->bio) }}"></dd>
+<dd>bio<input type="text" name="upbio" value="{{ old('upbio',  Auth::user()->bio) }}"></dd>
 @if($errors->has('upbio'))
 			@foreach($errors->get('upbio') as $message)
 				{{ $message }}<br>
@@ -39,7 +38,4 @@
 </dd>
 <button type="submit" class="btn btn-success pull-right">更新</button>
 {!! Form::close() !!}
-
-
-@endforeach
 @endsection

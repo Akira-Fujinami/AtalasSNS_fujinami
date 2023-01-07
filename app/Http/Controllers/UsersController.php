@@ -26,34 +26,20 @@ class UsersController extends Controller
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
         $up_PW_confirmation=$request->input('upPW_confirmation');
-        $this->validate($request,[//バリデーションを行う
+        $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
-            'upmail' => 'required|string|email|max:255|unique:users',
+            'mail' => 'required|string|email|max:255|unique:users',
             'upbio' => 'string|max:150',
             'upPW' => 'required|string|min:4|confirmed',//confirmedは最初に書く
             'upPW_confirmation' => 'required|string|min:4']);//名前_confirmation
-                   $this->validate($request,$rules);
-        if($validater->fails()){
-           return redirect()->back()
-            ->withInput()
-            ->withErrors($validater);
-        }
         User::where('id',$id)->update([
             'username'=>$up_name,
             'mail'=>$up_mail,
             'bio'=>$up_bio,
             'password'=>$up_PW,$up_PW_confirmation,
-        ]);
+        ]);$this->create($data);//値を保存する
         return redirect('/profile');
     }
-    public function createProfile(Request $request){
-        $bio=$request->input('upbio');
-        User::create([
-            'bio'=>$bio,
-            'id'=>Auth::id()
-        ]);return redirect('/profile');
-    }
-    
     public function search(){
         $search=User::where('id','!=',Auth::id())->get();
         return view('users.search',['search'=>$search]);
