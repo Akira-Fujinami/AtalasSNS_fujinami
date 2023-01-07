@@ -1,7 +1,8 @@
 @extends('layouts.login')
 
 @section('content')
-<form action="{{url('/profile/update')}}" method="post">
+<img src="{{asset('storage/'.Auth::user()->images)}}">
+<form action="{{url('/profile/update')}}" method="post" enctype="multipart/form-data">
 @csrf
 <ol>
 <dd class="user-name">user name<input type="text" class="upname" name="upname" value="{{ old('upname',  Auth::user()->username) }}"></dd>
@@ -36,7 +37,6 @@
 		@endif 
 </dd>
 <dd>icon image<input type="file" name="image"></dd>
-<img src="{{asset('storage/'.Auth::user()->images)}}">
 <button type="submit" class="btn-update">更新</button>
 </form>
 @endsection

@@ -25,8 +25,7 @@ class UsersController extends Controller
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $image=$request->file('image')->getClientOriginalName();
-        $image->store('public/images');
+        $image=$request->image->store('public/images');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
             'upmail' => 'required|string|email|max:255',
