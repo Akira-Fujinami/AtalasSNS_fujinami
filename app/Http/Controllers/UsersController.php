@@ -15,9 +15,11 @@ class UsersController extends Controller
 {
 
     //
-    public function profile(){
+    public function profile(Request $request){
         $user=Auth::user()->get();
-        return view('users.profile',['user'=>$user]);
+        $image=$request->file('image')->getClientOriginalName();
+        $image->store('public/images');
+        return view('users.profile',compact('user','image'));
     }
     public function updateProfile(Request $request){
         $id=Auth::id();
@@ -25,8 +27,6 @@ class UsersController extends Controller
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $image=$request->file('image')->getClientOriginalName();
-        $image->store('public/images');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
             'upmail' => 'required|string|email|max:255',
