@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Auth;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -25,7 +26,7 @@ class UsersController extends Controller
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $image=$request->image->store('public/images');
+        $image=$request->image->store('','public');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
             'upmail' => 'required|string|email|max:255',
@@ -39,8 +40,8 @@ class UsersController extends Controller
             'bio'=>$up_bio,
             'password'=>$up_PW,
             'images'=>$image,
+            'password'     => Hash::make($up_PW),
         ]);
-        return redirect('/profile');
     }
     public function search(){
         $search=User::where('id','!=',Auth::id())->get();

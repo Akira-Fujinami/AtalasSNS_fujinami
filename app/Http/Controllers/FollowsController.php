@@ -25,13 +25,14 @@ class FollowsController extends Controller
             'follower_count' => $follower_count
         ]);
     }
-    public function follow(User $search){
-        $follower=auth()->user();//全てのユーザー
-        $is_following=$follower->isFollowing($search->id);//フォローしているか
-        if(!$is_following){//フォローしていなかったらフォローする
-            $follower->follow($search->id);
-            return redirect('/search');
-        }
+    public function follow(Request $request){
+        $followed_id=$request->input('id');
+        //dd($followed_id);
+        Follow::create([
+            'following_id'=>Auth::id(),
+            'followed_id'=>$followed_id,
+        ]);
+        return redirect('/search');
     }
 
     public function unfollow(User $search){

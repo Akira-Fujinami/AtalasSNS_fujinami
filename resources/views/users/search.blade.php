@@ -12,15 +12,16 @@
 @foreach ($search as $search)
 <div class="searching">
 {{ $search->username }}
+{{ $search->id }}
 @if (Auth::user()->isFollowing($search->id))
-                                   <form action="{{ url('/follow/{id}') }}" method="POST">
+                                   <form action="{{ ('/unfollow/{$search->id}') }}" method="POST">
                                        {{ csrf_field() }}
                                        {{ method_field('DELETE') }}
  
                                        <button type="submit" class="btn-unfollow">フォロー解除</button>
                                    </form>
                                @else
-                                   <form action="{{ url('/unfollow/{id}') }}" method="POST">
+                                   <form action="{{ ('/follow/{$search->id}') }}" method="POST">
                                        {{ csrf_field() }}
  
                                        <button type="submit" class="btn-follow">フォローする</button>
