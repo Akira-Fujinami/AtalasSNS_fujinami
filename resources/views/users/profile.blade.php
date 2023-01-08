@@ -41,6 +41,11 @@
 		@endif 
 </dd>
 <dd>icon image<input type="file" name="image"></dd>
+@if($errors->has('image'))
+			@foreach($errors->get('image') as $message)
+				{{ $message }}<br>
+			@endforeach
+		@endif 
 <button type="submit" class="btn-update">更新</button>
 </form>
 @endsection

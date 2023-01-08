@@ -45,8 +45,8 @@ Route::get('post/{id}/delete','Postscontroller@delete');
 Route::get('/search','Userscontroller@search');
 Route::post('/search','Userscontroller@searching');
 
-Route::get('/follow/{id}','Followscontroller@follow');
-Route::get('/unfollow/{id}','Followscontroller@unfollow');
+Route::post('/follow/{id}','Followscontroller@follow');
+Route::post('/unfollow/{id}','Followscontroller@unfollow');
 
 Route::get('/profile','UsersController@profile');
 Route::post('/profile/update','Userscontroller@updateProfile');

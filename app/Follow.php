@@ -13,6 +13,8 @@ class Follow extends Model
         'following_id',
         'followed_id'
         ];
+public $timestamps = false;
+public $incrementing = false;
     
       public function getFollowCount($user_id)
       {

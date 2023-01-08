@@ -7,14 +7,26 @@
 <span class="search-word">検索ワード：{{$result}}</span>
 @endif
 {!!Form::close()!!}
-{{session('result')}}
 <div id="top-bar">
 </div>
 @foreach ($search as $search)
 <div class="searching">
 {{ $search->username }}
-<input type="button" class="btn-follow" onclick="location.href='http://127.0.0.1:8000/follow/{id}' "value="フォローする">
-<input type="button" class="btn-unfollow" onclick="location.href='http://127.0.0.1:8000//unfollow/{id}' "value="フォロー解除">
+@if (Auth::user()->isFollowing($search->id))
+                                   <form action="{{ url('/follow/{id}') }}" method="POST">
+                                       {{ csrf_field() }}
+                                       {{ method_field('DELETE') }}
+ 
+                                       <button type="submit" class="btn-unfollow">フォロー解除</button>
+                                   </form>
+                               @else
+                                   <form action="{{ url('/unfollow/{id}') }}" method="POST">
+                                       {{ csrf_field() }}
+ 
+                                       <button type="submit" class="btn-follow">フォローする</button>
+                                   </form>
+                               @endif
+
 </div>
 @endforeach
 @endsection
