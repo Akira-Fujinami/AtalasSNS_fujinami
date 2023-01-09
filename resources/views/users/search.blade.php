@@ -14,18 +14,18 @@
 {{ $search->username }}
 {{ $search->id }}
 @if (Auth::user()->isFollowing($search->id))
-                                   <form action="{{ ('/unfollow/{$search->id}') }}" method="POST">
-                                       {{ csrf_field() }}
-                                       {{ method_field('DELETE') }}
- 
-                                       <button type="submit" class="btn-unfollow">フォロー解除</button>
-                                   </form>
+{{Form::open(['url'=>'/unfollow/{id}'])}}
+                {{Form::hidden('id',$search->id)}}
+                <td>{{Form::submit('フォロー解除',['class'=>'btn-unfollow'])}}</td>
+               {{Form::close()}}
+
+
+
                                @else
-                                   <form action="{{ ('/follow/{$search->id}') }}" method="POST">
-                                       {{ csrf_field() }}
- 
-                                       <button type="submit" class="btn-follow">フォローする</button>
-                                   </form>
+                               {{Form::open(['url'=>'/follow/{id}'])}}
+                {{Form::hidden('id',$search->id)}}
+                <td>{{Form::submit('フォローをする',['class'=>'btn-follow'])}}</td>
+                {{Form::close()}}
                                @endif
 
 </div>

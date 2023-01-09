@@ -27,7 +27,6 @@ class FollowsController extends Controller
     }
     public function follow(Request $request){
         $followed_id=$request->input('id');
-        //dd($followed_id);
         Follow::create([
             'following_id'=>Auth::id(),
             'followed_id'=>$followed_id,
@@ -35,12 +34,9 @@ class FollowsController extends Controller
         return redirect('/search');
     }
 
-    public function unfollow(User $search){
-        $follower=auth()->user();//全てのユーザー
-        $is_following=$follower->isFollowing($search->id);//フォローしているか
-        if($is_following){//フォローしてたらフォローする
-            $follower->unfollow($search->id); 
-        }
+    public function unfollow(Request $request){
+        $followed_id=$request->input('id');
+        Follow::where('following_id',Auth::id())->where('followed_id',$followed_id)->delete();
         return redirect('/search');
     }
     //

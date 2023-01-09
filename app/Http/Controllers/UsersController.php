@@ -38,10 +38,10 @@ class UsersController extends Controller
             'username'=>$up_name,
             'mail'=>$up_mail,
             'bio'=>$up_bio,
-            'password'=>$up_PW,
+            'password'=>bcrypt($up_PW),
             'images'=>$image,
-            'password'     => Hash::make($up_PW),
         ]);
+        return redirect('profile');
     }
     public function search(){
         $search=User::where('id','!=',Auth::id())->get();
