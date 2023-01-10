@@ -26,7 +26,6 @@ class UsersController extends Controller
         $up_mail=$request->input('upmail');
         $up_bio=$request->input('upbio');
         $up_PW=$request->input('upPW');
-        $image=$request->image->store('','public');
         $request->validate([//バリデーションを行う
             'upname' => 'required|string|max:255',
             'upmail' => 'required|string|email|max:255',
@@ -34,13 +33,23 @@ class UsersController extends Controller
             'upPW' => 'required|string|min:4|confirmed',//confirmedは最初に書く
             'upPW_confirmation' => 'required|string|min:4',//名前_confirmation
             'image'=>'image|mimes:jpeg,png,jpg,gif']);
+            if(isset($image)){
+                $image=$request->image->store('','public');
         User::where('id',$id)->update([
             'username'=>$up_name,
             'mail'=>$up_mail,
             'bio'=>$up_bio,
             'password'=>bcrypt($up_PW),
             'images'=>$image,
-        ]);
+        ]);}
+        else{
+            User::where('id',$id)->update([
+                'username'=>$up_name,
+                'mail'=>$up_mail,
+                'bio'=>$up_bio,
+                'password'=>bcrypt($up_PW),
+            ]);
+        }
         return redirect('profile');
     }
     public function search(){

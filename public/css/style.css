@@ -28,15 +28,20 @@ header{
 #side-center-bar{
     border-top:1px solid #727272;
 }
+.followlist{
+    display: flex;
+    width:100%;
+}
+.followlist-post{
+    justify-content: space-between;
+}
 #top-bar{
     position: relative;
     top:-10px;
     border-top:7px solid #C8C8C8;
 }
 #top-bar-followlist{
-    position: relative;
-    top:120px;
-    border-top:7px solid #C8C8C8;
+    border-bottom:7px solid #C8C8C8;
 }
 #center-bar{
     position: relative;

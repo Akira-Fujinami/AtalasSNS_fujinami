@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Follow;
+use App\Post;
 
 class FollowsController extends Controller
 {
@@ -41,10 +42,16 @@ class FollowsController extends Controller
     }
     //
     public function followList(){
-        return view('follows.followList');
+        $followlist=Auth::user()->follows()->pluck('followed_id');//followed_idを指定する,
+        $posts=Post::with('user')->whereIn('user_id',$followlist)->orderby('created_at','desc')->get();
+        $users=User::wherein('id',$followlist)->get();
+        return view('follows.followList',['users'=>$users,'posts'=>$posts]);
     }
     public function followerList(){
-        return view('follows.followerList');
+        $followerlist=Auth::user()->follows()->pluck('following_id');//followed_idを指定する,
+        $posts=Post::with('user')->whereIn('user_id',$followerlist)->orderby('created_at','desc')->get();
+        $usered=User::wherein('id',$followerlist)->get();
+        return view('follows.followerList',['usered'=>$usered,'posts'=>$posts]);
     }
 
 }
