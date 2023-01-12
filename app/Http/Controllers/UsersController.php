@@ -50,7 +50,7 @@ class UsersController extends Controller
                 'password'=>bcrypt($up_PW),
             ]);
         }
-        return redirect('profile');
+        return redirect('/top');
     }
     public function search(){
         $search=User::where('id','!=',Auth::id())->get();

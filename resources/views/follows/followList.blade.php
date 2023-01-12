@@ -17,9 +17,9 @@
 <div class="followlist">
 <td>
 @if($posts->user->images == "dawn.png")
-<img src="{{asset('images/icon1.png')}}">
+<a href="/others/{{$posts->user_id}}"><img src="{{asset('images/icon1.png')}}"><a href="/others/{{$posts->user_id}}">
 @else
-<img src="{{asset('storage/'.$posts->user->images)}}" class="icon">
+<img src="{{asset('storage/'.$posts->user->images)}}" class="icon"><a href="/others/{{$posts->user_id}}">
 @endif
 <div class="followlist-posts">
 <div class="followlist-post">{{$posts->user->username}} 

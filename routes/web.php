@@ -55,4 +55,9 @@ Route::get('/show','FollowsContoroller@show');
 
 Route::get('/followList','FollowsController@followlist');
 Route::get('/followerList','FollowsController@followerlist');
+
+Route::get('/others/{user_id}','FollowsController@others');
+Route::post('others/follow/{id}','Followscontroller@othersfollow');
+Route::post('others/unfollow/{id}','Followscontroller@othersunfollow');
+
 });

@@ -10,7 +10,8 @@ class PostsController extends Controller
 {
     //
     public function index(){
-        $list=Post::where('user_id',Auth::id())->get();
+        $follow=Auth::user()->follows()->pluck('followed_id');
+        $list=Post::with('user')->where('user_id',Auth::id())->orwhere('user_id',$follow)->get();
         return view('posts.index',['list'=>$list]);//ファイル名,渡す先の変数名=>今回渡す変数名
     }
 

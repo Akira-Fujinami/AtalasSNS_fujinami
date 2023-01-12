@@ -17,14 +17,13 @@
 @foreach ($list as $list)
 <div class="posting">
 <tr>
-<td class="post-username">{{Auth::user()->username}}</td>
+<td class="post-username">{{$list->user->username}}</td>
 <td>{{$list->created_at}}</td>
 </tr>
 <div>
-{{ $list->post }}
-<a class="btn btn-danger" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
+{{ $list->post }}<a class="btn btn-clear" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
         <!-- 投稿の編集ボタン -->
-        <a class="js-modal-open" href="/top/{{$list->id}}/" post="{{ $list->post }}" id="{{ $list->id }}"><img src="images/edit.png"></a></div>
+        <a class="js-modal-open update" href="/top/{{$list->id}}/" post="{{ $list->post }}" id="{{ $list->id }}"><img src="images/edit.png"></a></div>
         <div id="center-bar"></div>
         <!-- モーダルの中身 -->
     <div class="modal js-modal">
