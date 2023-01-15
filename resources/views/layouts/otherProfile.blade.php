@@ -29,15 +29,19 @@
 @endforeach
 </div>
 @foreach ($posts as $posts)
-
-{{$posts->post}}
+<div id="center-bar">
+<td>
 @if($posts->user->images == "dawn.png")
 <img src="/images/icon1.png">
 @else
 <img src="{{asset('storage/'.$posts->user->images)}}" class="icon">
 
 @endif
-{{$posts->user->username}}
-{{$posts->created_at}}
+<div class="others-posts">
+<div class="others-create">{{$posts->user->username}}</div>
+<div class="others-username">{{$posts->post}}</div>
+<div class="others-post">{{$posts->created_at}}</div>
+</div>
+</td></div>
 @endforeach
 @endsection

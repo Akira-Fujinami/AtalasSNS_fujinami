@@ -23,7 +23,7 @@
     <header>
         <div class="container">
         <div id = "head">
-        <p class="atlas"><a href="/top"><img src="images/atlas.png"></a></div>
+        <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}"></a></div>
         <div class="header-menu">
         <div class="login-user">{{Auth::user()->username}}     さん</div>
         <div class="accordion">
@@ -44,18 +44,19 @@
         <div id="container">
             @yield('content')
         </div >
-        <div id="side-bar">
+        <div id="side-bars">
             <div id="confirm"class="side-bar">
                 <h6 class="username6">{{Auth::user()->username}}さんの</p>
                 <div>
                     <div class="follow">
                 <div class="follow-number">フォロー数</div>
-                <div class="number">〇〇名</div></div>
+                <div class="number">{{ Auth::user()->follows()->count() }}名
+                </div></div>
                 </div>
-                <input type="button" class="btn-follow" onclick="location.href='http://127.0.0.1:8000/followList' "value="フォローリスト">
+                <a href="/followList"><div class="button-followlist">followlist</div></a>
                 <div class="follow">
                 <div class="follow-number">フォロー数</div>
-                <div class="number">〇〇名</div></div>
+                <div class="number">{{ Auth::user()->followers()->count() }}名</div></div>
                 
                 <input type="button" class="btn-follower" onclick="location.href='http://127.0.0.1:8000/followerList' "value="フォロワーリスト">
             </div>

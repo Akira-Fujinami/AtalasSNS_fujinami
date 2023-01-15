@@ -27,7 +27,7 @@
     <div>
 
 {{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::password('password',null,['class' => 'input']) }}
 </div>
 		@if($errors->has('password'))
 			@foreach($errors->get('password') as $message)
@@ -37,7 +37,7 @@
     <div>
 
 {{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+{{ Form::password('password_confirmation',null,['class' => 'input']) }}
 </div>
 		@if($errors->has('password_confirmation'))
 			@foreach($errors->get('password_confirmation') as $message)

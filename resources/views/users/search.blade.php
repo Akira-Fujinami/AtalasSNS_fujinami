@@ -12,7 +12,6 @@
 @foreach ($search as $search)
 <div class="searching">
 {{ $search->username }}
-{{ $search->id }}
 @if (Auth::user()->isFollowing($search->id))
 {{Form::open(['url'=>'/unfollow/{id}'])}}
                 {{Form::hidden('id',$search->id)}}

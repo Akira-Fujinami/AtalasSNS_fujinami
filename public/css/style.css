@@ -21,7 +21,7 @@ header{
 #container{
     flex: 0 0 80%;
 }
-#side-bar{
+#side-bars{
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
@@ -35,11 +35,52 @@ header{
 .followlist-post{
     justify-content: space-between;
 }
+.followlist-username{
+    position: relative;
+    left:400px;
+    top:-40px
+}
+.followlist-create{
+    position: relative;
+    left:950px;
+    top:-55px;
+}
+.followlist-post{
+    position: relative;
+    left:400px;
+    bottom:30px
+}
 .icon{
     width:10%;
     position: relative;
     left: 80px;
     top: 80px;
+}
+.icon-3{
+    position: relative;
+    left:50px;
+    top:130px
+}
+.icon-4{
+    position: relative;
+    left:50px;
+    width:10%;
+}
+.others-create{
+    position: relative;
+    left:200px;
+    top:-40px
+}
+.icon-13{
+    position: relative;
+    left:250px;
+    width:10%;
+    top:-10px
+}
+.icon-14{
+    position: relative;
+    left:250px;
+    top:-10px
 }
 #top-bar{
     position: relative;
@@ -49,10 +90,12 @@ header{
 #top-bar-followlist{
     border-bottom:7px solid #C8C8C8;
 }
+#top-bar-followerlist{
+    border-bottom: 7px solid #C8C8C8;
+}
 #center-bar{
-    position: relative;
-    top: 70px;
     border-bottom: 1px solid #727272;
+    max-width: 100%;
 }
 /*  アコーディオンメニュー*/
 dt{
@@ -88,6 +131,35 @@ li:first-child{
 }
 ul.right{
     text-align: right;
+}
+h1{
+    position: relative;
+    top:30px;
+    left:100px;
+    font-weight: bold;
+    font-size: x-large;
+}
+.icon-9{
+    position: relative;
+    left:240px;
+    top:-10px
+}
+.icon-10{
+    position: relative;
+    top:-16px;
+    width:10%;
+    left:230px
+}
+.icon-11{
+    width:10%;
+    position: relative;
+    left:180px;
+    margin-top:10px
+}
+.icon-12{
+    position: relative;
+    top:10px;
+    left:200px;
 }
 .username{
     display:flex;
@@ -131,26 +203,30 @@ dt.open::after {
 .post{
 width: 100px;
 position: relative;
-top:80px
+top:-50px;
+right:-800px
+}
+.posting-username{
+    margin-top: -30px;
 }
 .form-group{
     position: relative;
-    left:100px;
     top:10px;
     padding-bottom: 100px;
+    max-width: 90%;
 }
 .post-username{
     text-align: center;
 }
 .posting{
-    padding-bottom: 100px;
+    display: block;
 }
 .btn img{
     width:50px;
 }
 .btn-clear{
     position: absolute;
-    left:950px;
+    left:850px;
 }
 .my-icon img{
     width:50px;
@@ -162,14 +238,9 @@ top:80px
     width:50px;
 }
 .update{
-    position:absolute;
-    left:850px;
-}
-
-.update{
     width:50px;
     position: relative;
-    right:-600px;
+    right:-800px;
 }
 /*  ユーザー検索*/
 .search{
@@ -205,6 +276,9 @@ top:80px
     box-sizing: border-box;
     margin: 0.5em 0;
     line-height: 5;
+    position: relative;
+    top:-20px;
+    left:100px
 }
 .text2{
     display: inline-block;

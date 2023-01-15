@@ -13,12 +13,12 @@ class FollowsController extends Controller
     public function show(User $user, Follow $follow)
     {
         $login_user = auth()->user();
-        $is_following = $login_user->isFollowing($user->id);
-        $is_followed = $login_user->isFollowed($user->id);
-        $follow_count = $follow->getFollowCount($user->id);
-        $follower_count = $follow->getFollowerCount($user->id);
+        $is_following = $login_user->isFollowing($login_user->id);
+        $is_followed = $login_user->isFollowed($login_user->id);
+        $follow_count = $follow->getFollowCount($login_user->id);
+        $follower_count = $follow->getFollowerCount($login_user->id);
 
-        return view('users.show', [
+        return view('posts.index', [
             'user'           => $user,
             'is_following'   => $is_following,
             'is_followed'    => $is_followed,
@@ -48,7 +48,7 @@ class FollowsController extends Controller
         return view('follows.followList',['users'=>$users,'posts'=>$posts]);
     }
     public function followerList(){
-        $followerlist=Auth::user()->follows()->pluck('following_id');//followed_idを指定する,
+        $followerlist=Auth::user()->followers()->pluck('following_id');
         $posts=Post::with('user')->whereIn('user_id',$followerlist)->orderby('created_at','desc')->get();
         $usered=User::wherein('id',$followerlist)->get();
         return view('follows.followerList',['usered'=>$usered,'posts'=>$posts]);
@@ -64,13 +64,12 @@ class FollowsController extends Controller
             'following_id'=>Auth::id(),
             'followed_id'=>$followed_id,
         ]);
-        return redirect('/top');
+        return back();
     }
     public function othersunfollow(Request $request){
         $followed_id=$request->input('id');
         Follow::where('following_id',Auth::id())->where('followed_id',$followed_id)->delete();
-        return redirect('/top');
+        return back();
     }
-
 
 }

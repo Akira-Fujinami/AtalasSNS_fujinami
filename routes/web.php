@@ -40,7 +40,7 @@ Route::post('/post','PostsController@create');
 
 Route::post('/post/update','Postscontroller@update');
 
-Route::get('post/{id}/delete','Postscontroller@delete');
+Route::get('/post/{id}/delete','Postscontroller@delete');
 
 Route::get('/search','Userscontroller@search');
 Route::post('/search','Userscontroller@searching');
@@ -57,7 +57,7 @@ Route::get('/followList','FollowsController@followlist');
 Route::get('/followerList','FollowsController@followerlist');
 
 Route::get('/others/{user_id}','FollowsController@others');
-Route::post('others/follow/{id}','Followscontroller@othersfollow');
-Route::post('others/unfollow/{id}','Followscontroller@othersunfollow');
+Route::post('/others/follow/{id}','Followscontroller@othersfollow');
+Route::post('/others/unfollow/{id}','Followscontroller@othersunfollow');
 
 });
