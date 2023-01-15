@@ -1,38 +1,31 @@
 @extends('layouts.login')
 
 @section('content')
-<div class="container">
+<div id="top-bar-followlist">
 <form action="{{url('/post')}}" method="POST">
     @csrf
-<div class="my-icon"></div>
-</div>
-<div class="form-group">
 @if(Auth::user()->images == "dawn.png")
-<img src="{{asset('images/icon1.png')}}" clas="icon-3">
+<div class="icon-21">
+<img src="{{asset('images/icon1.png')}}"></div>
 @else
 <img src="{{asset('storage/'.Auth::user()->images)}}" class="icon-4">
 @endif
 <input type="text" maxlength="150" class="text1" name="newPost" required placeholder="投稿内容を入力してください。">
 <input type="image" class="post" src="images/post.png">
-</form>
-<div id="top-bar">
-</div>
+</form></div>
 {!!Form::close()!!}
 @foreach ($list as $list)
-<tr>
-<td class="post-username">
+<div id="center-bar">
 @if($list->user->images == "dawn.png")
-<img src="{{asset('images/icon1.png')}}" clas="icon-3">
+<div class="icon-9">
+<img src="{{asset('images/icon1.png')}}"></div>
 @else
 <img src="{{asset('storage/'.$list->user->images)}}" class="icon-4">
 @endif
-<div id="center-bar">
-    <div class="posting">
-    <h8 class="posting-username">{{$list->user->username}}</td>
-<td>{{$list->created_at}}</td>
-</tr>
-<div>
-{{ $list->post }}
+<div class="followlist-posts">
+<div class="post-username">{{$list->user->username}}</div>
+<div class="followlist-create">{{$list->created_at}}</div>
+<div class="post-post">{{ $list->post }}</div>
 </div>
 @if($list->user->username == Auth::user()->username)
 <a class="btn btn-clear" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
@@ -58,7 +51,6 @@
     @endif
 </tr>
 </div></div></div>
-<script src="{{ asset('/js/app.js') }}"></script>
-    <script src="{{ asset('/js/script.js') }}"></script>
+
 @endforeach
 @endsection

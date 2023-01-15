@@ -5,6 +5,129 @@ html{
 }
 
 body{
-    height: 100%;
-    background: #186AC9;
+    background-image: linear-gradient(to top,yellow,lightblue,blue);
+}
+h1{
+    text-align: center;
+    position: absolute;
+    top:90px;
+    left:550px;
+}
+.title{
+    text-align: center;
+    position: relative;
+    top:200px;
+    font-weight: bold;
+    color: white;
+    font-size: xx-large;
+}
+#register{
+    margin       : auto;
+    width        : 150px;
+    height       : 150px;
+    background   : #808080;
+    opacity: 0.4;
+    border-radius: 10px;
+    position: relative;
+    top:250px;
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.login{
+        margin       : auto;
+        width        : 150px;
+        height       : 150px;
+        background   : #808080;
+        opacity: 0.4;
+        border-radius: 10px;
+        position: relative;
+        top:250px;
+        padding: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+}
+.input{
+    border-radius: 10px;
+}
+.inputing{
+    border-radius: 10px;
+    position: relative;
+    left:530px;
+    top:95px;
+}
+.password{
+    position: relative;
+    left:635px;
+    top:110px;
+}
+.inputed{
+    border-radius: 10px;
+    position: relative;
+    left:530px;
+}
+.password_confirmation{
+    position: relative;
+    left:635px;
+    top:130px
+}
+p{
+    color: white;
+    position: relative;
+    top:-20px;
+    left:20px;
+    font-size: small;
+}
+.output{
+    background-color: red;
+    border-radius: 10px;
+    position: relative;
+    left:100px;
+    top:10px
+}
+#pw{
+    border-radius: 10px;
+}
+.outpter{
+    background-color: red;
+    border-radius: 10px;
+    position: relative;
+    left:750px;
+    top:160px;
+    cursor: pointer;
+}
+
+.register{
+    position: relative;
+    top:50px;
+    left:10px;
+    font-size: xx-small;
+}
+h4{
+    position:absolute;
+    top:100px;
+}
+h2{
+    position: relative;
+    top:-30px;
+}
+h7{
+    position: relative;
+    left:540px;
+    top:160px
+}
+.username{
+    position: relative;
+    top:-20px
+}
+.inputer{
+    position: relative;
+    top:-20px;
+    border-radius: 10px;
+}
+.address{
+    position: relative;
+    left:635px;
+    top:70px
 }

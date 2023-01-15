@@ -1,9 +1,8 @@
 @extends('layouts.logout')
 
 @section('content')
-
+<div class="register">
 {!! Form::open(['url' => 'register']) !!}
-
 <h2>新規ユーザー登録</h2>
 
 {{ Form::label('ユーザー名') }}
@@ -52,5 +51,5 @@
 
 {!! Form::close() !!}
 
-
+</div>
 @endsection

@@ -27,9 +27,10 @@
         <div class="header-menu">
         <div class="login-user">{{Auth::user()->username}}     さん</div>
         <div class="accordion">
-            <div class="login-icon"><img src="images/icon1.png"></div>
+            <div class="login-icon"><img src="{{asset('images/icon1.png')}}"></div>
     <dl><dt></dt></div></div>
     </header>
+
 <nav class="menu">
     <ul class="right">
         <li><a href="/top">HOME</a></li>
@@ -58,10 +59,10 @@
                 <div class="follow-number">フォロー数</div>
                 <div class="number">{{ Auth::user()->followers()->count() }}名</div></div>
                 
-                <input type="button" class="btn-follower" onclick="location.href='http://127.0.0.1:8000/followerList' "value="フォロワーリスト">
+                <a href="/followerList"><div class="button-followlist">followerlist</div></a>
             </div>
             <div id="side-center-bar"></div>
-            <input type="button" class="search" onclick="location.href='http://127.0.0.1:8000/search'"value=ユーザー検索>
+            <a href="/search"><div class="button-followlist">ユーザー検索</div></a>
         </div>
     </div>
     <footer>

@@ -6,14 +6,14 @@
 <div class="login">
 <p>AtlasSNSへようこそ</p>
 
-{{ Form::label('e-mail') }}
+{{ Form::label('email') }}
 {{ Form::text('mail',null,['class' => 'input']) }}
 {{ Form::label('password') }}
 {{ Form::password('password',['class' => 'input']) }}
 
-{{ Form::submit('ログイン') }}
+{{ Form::submit('ログイン',['class'=>'output'])}}
 
-<p><a href="/register">新規ユーザーの方はこちら</a></p></div>
+<h4 class="register"><a href="/register">新規ユーザーの方はこちら</a></h4></div>
 
 {!! Form::close() !!}
 
