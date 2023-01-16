@@ -11,6 +11,11 @@
 </div>
 @foreach ($search as $search)
 <div class="searching">
+@if($search->images == "dawn.png")
+<img src="images/icon1.png" class="">
+@else
+<img src="{{asset('storage/'.$search->images)}}" class="icon-51">
+@endif
 {{ $search->username }}
 @if (Auth::user()->isFollowing($search->id))
 {{Form::open(['url'=>'/unfollow/{id}'])}}

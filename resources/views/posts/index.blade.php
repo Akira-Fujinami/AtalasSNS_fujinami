@@ -17,7 +17,7 @@
 @foreach ($list as $list)
 <div id="center-bar">
 @if($list->user->images == "dawn.png")
-<div class="icon-9">
+<div class="icon-50">
 <img src="{{asset('images/icon1.png')}}"></div>
 @else
 <img src="{{asset('storage/'.$list->user->images)}}" class="icon-4">

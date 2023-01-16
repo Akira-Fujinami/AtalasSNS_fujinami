@@ -48,6 +48,50 @@ h1{
         padding-top: 50px;
         padding-bottom: 50px;
 }
+#clear{
+    margin       : auto;
+    width        : 150px;
+    height       : 150px;
+    background   : #808080;
+    opacity: 0.4;
+    border-radius: 10px;
+    position: relative;
+    top:250px;
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+h10{
+    position: relative;
+    top:-30px;
+    font-size: x-large;
+    left:60px
+}
+h11{
+    position: relative;
+    left:-15px;
+    top:-20px;
+    white-space: nowrap;
+}
+h12{
+    white-space: nowrap;
+    position: relative;
+    left:-30px
+}
+h13{
+    white-space: nowrap;
+    position: relative;
+    left:-40px;
+    top:30px
+}
+.btn{
+    background-color: red;
+    border-radius: 10px;
+    padding:10px;
+    padding-right: 10px;
+    text-align: center;
+    top:50px
+}
 .input{
     border-radius: 10px;
 }
@@ -93,8 +137,8 @@ p{
     background-color: red;
     border-radius: 10px;
     position: relative;
-    left:750px;
-    top:160px;
+    left:120px;
+    top:20px;
     cursor: pointer;
 }
 
@@ -112,22 +156,44 @@ h2{
     position: relative;
     top:-30px;
 }
+.input-PW{
+    position: relative;
+    left:555px;
+    border-radius: 10px;
+    top:130px
+}
 h7{
     position: relative;
-    left:540px;
-    top:160px
+    left:-10px;
+    top:-20px;
+    white-space: nowrap;
+}
+.message{
+    display: flex;
+    justify-content: space-between;
 }
 .username{
-    position: relative;
-    top:-20px
-}
-.inputer{
+    display: flex;
+    justify-content: space-between;
     position: relative;
     top:-20px;
     border-radius: 10px;
+}
+.inputer{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: relative;
+    top:-20px
 }
 .address{
     position: relative;
     left:635px;
     top:70px
+}
+.input-PWC{
+    position: relative;
+    left:450px;
+    top:150px;
+    border-radius: 10px;
 }

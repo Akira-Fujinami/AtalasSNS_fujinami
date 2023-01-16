@@ -24,10 +24,15 @@
         <div class="container">
         <div id = "head">
         <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}"></a></div>
-        <div class="header-menu">
+        @if(Auth::user()->images == "dawn.png")
+<div class="icon-54">
+<img src="{{asset('images/icon1.png')}}"></div>
+@else
+<img src="{{asset('storage/'.Auth::user()->images)}}" class="icon-56">
+@endif
+<div class="header-menu">
         <div class="login-user">{{Auth::user()->username}}     さん</div>
         <div class="accordion">
-            <div class="login-icon"><img src="{{asset('images/icon1.png')}}"></div>
     <dl><dt></dt></div></div>
     </header>
 

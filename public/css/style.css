@@ -70,6 +70,36 @@ header{
     left:50px;
     width:7%;
 }
+.icon98{
+    position: relative;
+    left:100px;
+    top:70px
+}
+.user-name {
+    margin-bottom: 1rem;
+    border: 0;
+    position: relative;
+    left:50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  input.input, textarea{
+    text-align: left;
+    background-color: #e5e5e5;
+    border: 1px solid #7a7a7a;
+    width:40em;
+    position: relative;
+    left:100px
+  }
+  input.file{
+    position: relative;
+    left:100px
+  }
+  .form-update{
+    margin: 0 auto; /* 中央寄せ */
+    display: table;
+  }
+
 .others-create{
     position: relative;
     left:200px;
@@ -81,6 +111,11 @@ header{
     width:10%;
     top:-10px
 }
+.icon-54{
+    position: relative;
+    left:1300px;
+    top:25px
+}
 .icon-20{
     margin-top: 100px;
 }
@@ -88,6 +123,12 @@ header{
     position: relative;
     left:250px;
     top:-10px
+}
+.icon-56{
+    width:7%;
+    position:relative;
+    left:1300px;
+    top:20px
 }
 #top-bar{
     position: relative;
@@ -112,7 +153,8 @@ dt{
     cursor:pointer;
     position:relative;
     color:#fff;
-    bottom: 50px;
+    bottom: -20px;
+    left:10px
 }
 ul li{
     padding-top: 10px;
@@ -152,13 +194,22 @@ h1{
 }
 .icon-9{
     position: relative;
-    left:80px;
-    top:10px
+    left:230px;
+    top:-10px
+}
+.icon-50{
+    position: relative;
+    left:80px
 }
 .icon-21{
     position: relative;
     left:10px;
     top:90px
+}
+.icon-51{
+    position: relative;
+    width:10%;
+    left:0px;
 }
 .icon-10{
     position: relative;
