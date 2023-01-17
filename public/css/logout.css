@@ -138,8 +138,9 @@ p{
     border-radius: 10px;
     position: relative;
     left:120px;
-    top:20px;
+    top:130px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .register{
@@ -165,12 +166,9 @@ h2{
 h7{
     position: relative;
     left:-10px;
-    top:-20px;
+    top:140px;
     white-space: nowrap;
-}
-.message{
-    display: flex;
-    justify-content: space-between;
+    z-index: 2;
 }
 .username{
     display: flex;
@@ -196,4 +194,14 @@ h7{
     left:450px;
     top:150px;
     border-radius: 10px;
+}
+.top-message{
+    position: absolute;
+    z-index:1;
+}
+.message{
+    position: relative;
+    left:-400px;
+    top:-30px;
+    white-space: nowrap;
 }

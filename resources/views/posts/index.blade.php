@@ -15,7 +15,7 @@
 </form></div>
 {!!Form::close()!!}
 @foreach ($list as $list)
-<div id="center-bar">
+<div id="center-bar"></div>
 @if($list->user->images == "dawn.png")
 <div class="icon-50">
 <img src="{{asset('images/icon1.png')}}"></div>
@@ -30,7 +30,7 @@
 @if($list->user->username == Auth::user()->username)
 <a class="btn btn-clear" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
         <!-- 投稿の編集ボタン -->
-        <a class="js-modal-open update" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png"></a></div>
+        <a class="js-modal-open image" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png"></a></div>
         <!-- モーダルの中身 -->
     <div class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
@@ -38,7 +38,7 @@
         {!! Form::open(['url' => '/post/update']) !!}
         <div class="form-grouping">
             {!! Form::hidden('id', '',['class'=>'modal_id']) !!}
-            {!! Form::input('text', 'upPost', '', ['required', 'class' => 'modal_post']) !!}
+            {!! Form::input('text', 'upPost', '', ['required', 'class' => 'modal_post','maxlength' => 10]) !!}
         </div>
         <input type="image" class="update" src="images/edit.png">
         {!! Form::close() !!}
@@ -50,7 +50,7 @@
     @else
     @endif
 </tr>
-</div></div></div>
+</div></div>
 
 @endforeach
 @endsection

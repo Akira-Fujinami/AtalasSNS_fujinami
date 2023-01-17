@@ -2,7 +2,6 @@
     $(function(){$('.menu li').hide();
     $('.accordion dl dt').click(function(e) {
       $('.accordion dl dt').toggleClass("open");
-      $('.side-bar').toggle();
       $('.menu li').slideToggle('normal');
     })
     

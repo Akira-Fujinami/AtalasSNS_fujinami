@@ -4,14 +4,20 @@
 <div id="top-bar-followlist">
 @foreach ($others as $others)
 @if($others->images == "dawn.png")
-<img src="/images/icon1.png">
+<div class="icon100">
+<img src="/images/icon1.png"></div>
 @else
-<img src="{{asset('storage/'.$others->images)}}" class="icon">
+<img src="{{asset('storage/'.$others->images)}}" class="icon101">
 
 @endif
-{{$others->username}}
-{{$others->bio}}
+<div class="others">
+    <div class="other-name">
+name</div><div class="others-name">{{$others->username}}</div>
+<div class="other-bio">
+bio </div><div class="others-bio">{{$others->bio}}</div>
+</div>
 
+<div class="other-follow">
 @if (Auth::user()->isFollowing($others->id))
 {{Form::open(['url'=>'others/unfollow/{id}'])}}
                 {{Form::hidden('id',$others->id)}}
@@ -28,20 +34,21 @@
                                @endif
 @endforeach
 </div>
+</div>
 @foreach ($posts as $posts)
 <div id="center-bar">
 <td>
 @if($posts->user->images == "dawn.png")
-<img src="/images/icon1.png">
+<div class="icon110">
+<img src="/images/icon1.png"></div>
 @else
-<img src="{{asset('storage/'.$posts->user->images)}}" class="icon">
+<img src="{{asset('storage/'.$posts->user->images)}}" class="icon111">
 
 @endif
 <div class="others-posts">
 <div class="others-create">{{$posts->user->username}}</div>
+<div class="others-post">{{$posts->created_at}}</div></div>
 <div class="others-username">{{$posts->post}}</div>
-<div class="others-post">{{$posts->created_at}}</div>
-</div>
 </td></div>
 @endforeach
 @endsection
