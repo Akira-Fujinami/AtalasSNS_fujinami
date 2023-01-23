@@ -23,7 +23,7 @@
 <a href="/others/{{$posts->user_id}}"><img src="{{asset('storage/'.$posts->user->images)}}" class="icon-11">
 @endif
 <div class="followlist-posts">
-<div class="followlist-username">{{$posts->user->username}} </div>
+<div class="followlist-username">{{$posts->user->username}}</div>
 <div class="followlist-create">{{$posts->created_at}}</div>
 <div class="followlist-post">{{$posts->post}}</div>
 </div>

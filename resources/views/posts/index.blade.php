@@ -15,7 +15,7 @@
 </form></div>
 {!!Form::close()!!}
 @foreach ($list as $list)
-<div id="center-bar"></div>
+<div id="center-bar">
 @if($list->user->images == "dawn.png")
 <div class="icon-50">
 <img src="{{asset('images/icon1.png')}}"></div>
@@ -28,9 +28,14 @@
 <div class="post-post">{{ $list->post }}</div>
 </div>
 @if($list->user->username == Auth::user()->username)
-<a class="btn btn-clear" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')"><img src="images/trash.png"></a>
-        <!-- 投稿の編集ボタン -->
-        <a class="js-modal-open image" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png"></a></div>
+<div class="btn">
+    <a class="btn" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')">
+    <img class="h" src="images/trash-h.png">
+    <img class="tra" src="images/trash.png">
+</a>
+</div>        
+<!-- 投稿の編集ボタン -->
+        <a class="js-modal-open image" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png"></a>
         <!-- モーダルの中身 -->
     <div class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
@@ -38,19 +43,17 @@
         {!! Form::open(['url' => '/post/update']) !!}
         <div class="form-grouping">
             {!! Form::hidden('id', '',['class'=>'modal_id']) !!}
-            {!! Form::input('text', 'upPost', '', ['required', 'class' => 'modal_post','maxlength' => 10]) !!}
+            {!! Form::input('text', 'upPost', '', ['required', 'class' => 'modal_post','maxlength' => 150]) !!}
         </div>
         <input type="image" class="update" src="images/edit.png">
         {!! Form::close() !!}
                 {{ csrf_field() }}
            </form>
            <a class="js-modal-close" href="/top"></a>
-        </div>
-    </div>
+</div></div>
     @else
     @endif
 </tr>
-</div></div>
-
+</div>
 @endforeach
 @endsection

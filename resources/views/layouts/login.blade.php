@@ -67,7 +67,7 @@
                 <a href="/followerList"><div class="button-followlist">followerlist</div></a>
             </div>
             <div id="side-center-bar"></div>
-            <a href="/search"><div class="button-followlist">ユーザー検索</div></a>
+            <a href="/search"><div class="button-followlist-user">ユーザー検索</div></a>
         </div>
     </div>
     <footer>

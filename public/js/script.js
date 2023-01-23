@@ -2,10 +2,25 @@
     $(function(){$('.menu li').hide();
     $('.accordion dl dt').click(function(e) {
       $('.accordion dl dt').toggleClass("open");
+      $('.side-bar').toggle();
       $('.menu li').slideToggle('normal');
     })
     
 })
+$('.btn').hover(
+  function() {
+      
+      //マウスカーソルが重なった時の処理
+      $('.btn img:nth-of-type(1)').css('display','none');
+      $('.btn img:nth-of-type(2)').css('display','block');
+  },
+  function() {
+      
+      //マウスカーソルが離れた時の処理
+      $('.btn img:nth-of-type(2)').css('display', 'none');
+      $('.btn img:nth-of-type(1)').css('display', 'block');
+  }
+);
 
 $(function(){
   // 編集ボタン(class="js-modal-open")が押されたら発火
