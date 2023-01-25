@@ -9,7 +9,7 @@
   <h12>ユーザー登録が完了しました。</h12>
   <h13>早速ログインをしてみましょう。</h13>
 
-  <p class="btn"><a href="/login">ログイン画面へ</a></p>
+  <a href="/login">ログイン画面へ</a>
 </div>
 </div>
 @endsection

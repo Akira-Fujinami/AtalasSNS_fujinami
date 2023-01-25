@@ -2,7 +2,7 @@
 @section('content')
 {!! Form::open(['url' => '/search']) !!}
 {!!Form::input('text','search','',['class'=>'search-username','placeholder'=>'ユーザー名'])!!}
-<input type="image" class="search-image" src="images/post.png">
+<input type="image" class="search-image" src="images/虫眼鏡.png">
 @if(!empty($result))
 <span class="search-word">検索ワード：{{$result}}</span>
 @endif
@@ -12,11 +12,12 @@
 @foreach ($search as $search)
 <div class="searching">
 @if($search->images == "dawn.png")
-<img src="images/icon1.png" class="">
+<img src="images/icon1.png" class="icon-99">
 @else
 <img src="{{asset('storage/'.$search->images)}}" class="icon-51">
 @endif
-{{ $search->username }}
+<div class="searcher">
+{{ $search->username }}</div>
 @if (Auth::user()->isFollowing($search->id))
 {{Form::open(['url'=>'/unfollow/{id}'])}}
                 {{Form::hidden('id',$search->id)}}

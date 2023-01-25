@@ -10,33 +10,33 @@
 @csrf
 <ol>
 	<div class="form-update">
-<dd class="user-name">user name<input type="text" class="input" name="upname" value="{{ old('upname',  Auth::user()->username) }}"></dd>
-@if($errors->has('upname'))
-			@foreach($errors->get('upname') as $message)
+<dd class="user-name">user name<input type="text" class="input" name="user_name" value="{{ old('user_name',  Auth::user()->username) }}"></dd>
+@if($errors->has('user_name'))
+			@foreach($errors->get('user_name') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd class="user-name">mail address<input type="text" name="upmail" class="input" value="{{ old('upmail',  Auth::user()->mail) }}"></dd>
-@if($errors->has('upmail'))
-			@foreach($errors->get('upmail') as $message)
+<dd class="user-name">mail address<input type="text" name="mail_address" class="input" value="{{ old('mail_address',  Auth::user()->mail) }}"></dd>
+@if($errors->has('mail_address'))
+			@foreach($errors->get('mail_address') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd class="user-name">password<input type="password" class="input" name="upPW" ></dd>
-@if($errors->has('upPW'))
-			@foreach($errors->get('upPW') as $message)
+<dd class="user-name">password<input type="password" class="input" name="password" ></dd>
+@if($errors->has('password'))
+			@foreach($errors->get('password') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd class="user-name">password confirm<input type="password" class="input" name="upPW_confirmation"></dd>
-@if($errors->has('upPW_confirmation'))
-			@foreach($errors->get('upPW_confirmation') as $message)
+<dd class="user-name">password confirmation<input type="password" class="input" name="password_confirmation"></dd>
+@if($errors->has('password_confirmation'))
+			@foreach($errors->get('password_confirmation') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 
-<dd class="user-name">bio<textarea name="upbio">{{Auth::user()->bio}}</textarea></dd>
-@if($errors->has('upbio'))
-			@foreach($errors->get('upbio') as $message)
+<dd class="user-name">bio<textarea name="bio">{{Auth::user()->bio}}</textarea></dd>
+@if($errors->has('bio'))
+			@foreach($errors->get('bio') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 

@@ -23,7 +23,7 @@
     <header>
         <div class="container">
         <div id = "head">
-        <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}"></a></div>
+        <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}"></a></p></div>
         @if(Auth::user()->images == "dawn.png")
 <div class="icon-54">
 <img src="{{asset('images/icon1.png')}}"></div>
@@ -59,12 +59,12 @@
                 <div class="number">{{ Auth::user()->follows()->count() }}名
                 </div></div>
                 </div>
-                <a href="/followList"><div class="button-followlist">followlist</div></a>
+                <a href="/followList"><div class="button-followlist">フォローリスト</div></a>
                 <div class="follow">
                 <div class="follow-number">フォロー数</div>
                 <div class="number">{{ Auth::user()->followers()->count() }}名</div></div>
                 
-                <a href="/followerList"><div class="button-followlist">followerlist</div></a>
+                <a href="/followerList"><div class="button-followlist">フォロワーリスト</div></a>
             </div>
             <div id="side-center-bar"></div>
             <a href="/search"><div class="button-followlist-user">ユーザー検索</div></a>

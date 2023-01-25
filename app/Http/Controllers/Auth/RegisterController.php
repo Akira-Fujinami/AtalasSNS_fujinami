@@ -89,10 +89,10 @@ class RegisterController extends Controller
         if($request->isMethod('post')){//ismethod引数に指定した文字列とHTTP動詞が一致するか判定する
             $data = $request->input();//値を取得できる
             $this->validate($request,[//バリデーションを行う
-                'username' => 'required|string|max:255',
-                'mail' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:4|confirmed',//confirmedは最初に書く
-                'password_confirmation' => 'required|string|min:4']);//名前_confirmation
+                'username' => 'required|string|min:2|max:12',
+                'mail' => 'required|string|min:5|max:40|unique:users',
+                'password' => 'required|string|min:8|max:20|alpha_dash|confirmed',//confirmedは最初に書く
+                'password_confirmation' => 'required|string|min:8|max:20|alpha_dash']);//名前_confirmation
             $this->create($data);//値を保存する
             $user = $request->get('username');//値を取得する
             return redirect('added')->with('username',$user);//withメソッドを使いセッションに値を入れる

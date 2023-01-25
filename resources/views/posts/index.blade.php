@@ -24,12 +24,12 @@
 @endif
 <div class="followlist-posts">
 <div class="post-username">{{$list->user->username}}</div>
-<div class="followlist-create">{{$list->created_at}}</div>
+<div class="post-create">{{$list->created_at}}</div>
 <div class="post-post">{{ $list->post }}</div>
 </div>
 @if($list->user->username == Auth::user()->username)
 <div class="btn">
-    <a class="btn" href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')">
+    <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')">
     <img class="h" src="images/trash-h.png">
     <img class="tra" src="images/trash.png">
 </a>

@@ -16,7 +16,7 @@
 		@endif 
 </div>
 
-{{ Form::label('mail address','',['class'=>'username']) }}
+{{ Form::label('mail','',['class'=>'username']) }}
 {{ Form::text('mail',null,['class' => 'inputer']) }}
 <div class="message">
 		@if($errors->has('mail'))

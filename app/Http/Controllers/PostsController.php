@@ -11,7 +11,7 @@ class PostsController extends Controller
     //
     public function index(){
         $follow=Auth::user()->follows()->pluck('followed_id');
-        $list=Post::with('user')->where('user_id',Auth::id())->orwherein('user_id',$follow)->get();
+        $list=Post::with('user')->where('user_id',Auth::id())->orwherein('user_id',$follow)->orderby('created_at','desc')->get();
         return view('posts.index',['list'=>$list]);//ファイル名,渡す先の変数名=>今回渡す変数名
     }
     public function create(Request $request){
