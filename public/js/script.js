@@ -9,7 +9,7 @@
 })
 
 $(function(){
-$('.btn').children('img').hover(
+$('img').hover(
   function() {
       
       //マウスカーソルが重なった時の処理

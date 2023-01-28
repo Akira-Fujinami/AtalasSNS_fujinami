@@ -16,10 +16,12 @@ h1{
 .title{
     text-align: center;
     position: relative;
-    top:200px;
+    top:180px;
+    left:500px;
     font-weight: bold;
     color: white;
     font-size: xx-large;
+    scale: 0.7;
 }
 #register{
     margin       : auto;
@@ -30,7 +32,7 @@ h1{
     position: relative;
     top:250px;
     padding: 40px;
-    padding-top: 90px;
+    padding-top: 130px;
     padding-bottom: 140px;
     opacity: 0.6;
 }
@@ -194,6 +196,9 @@ h2{
     left:555px;
     border-radius: 10px;
     top:130px
+}
+h1{
+    scale: 0.5;
 }
 h7 a{
     position: relative;
