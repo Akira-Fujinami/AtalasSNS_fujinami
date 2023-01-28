@@ -1,7 +1,7 @@
 @extends('layouts.logout')
 
 @section('content')
-<div id="register">
+<div id="register"></div>
 {!! Form::open(['url' => 'register']) !!}
 <h2>新規ユーザー登録</h2>
 
@@ -16,7 +16,7 @@
 		@endif 
 </div>
 
-{{ Form::label('mail','',['class'=>'username']) }}
+{{ Form::label('mail address','',['class'=>'username']) }}
 {{ Form::text('mail_address',null,['class' => 'inputer']) }}
 <div class="message">
 		@if($errors->has('mail_address'))
@@ -47,11 +47,11 @@
 </div>
 </div>
 
-{{ Form::submit('register',['class'=>'outpter']) }}
+{{ Form::submit('REGISTER',['class'=>'outpter']) }}
 
 <h7><a href="/login">ログイン画面へ戻る</a></h7>
 
 {!! Form::close() !!}
 
-</div>
+
 @endsection

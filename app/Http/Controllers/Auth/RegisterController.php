@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -75,7 +76,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'username' => $data['username'],
-            'mail' => $data['mail'],
+            'mail' => $data['mail_address'],
             'password' => bcrypt($data['password']),
         ]);
     }
@@ -90,7 +91,7 @@ class RegisterController extends Controller
             $data = $request->input();//値を取得できる
             $this->validate($request,[//バリデーションを行う
                 'username' => 'required|string|min:2|max:12',
-                'mail_address' => 'required|string|email|min:5|max:40|unique:users,mail',
+                'mail_address' => ['required','email','string','min:5','max:40',Rule::unique('users','mail')],
                 'password' => 'required|string|min:8|max:20|alpha_dash|confirmed',//confirmedは最初に書く
                 'password_confirmation' => 'required|string|min:8|max:20|alpha_dash']);//名前_confirmation
             $this->create($data);//値を保存する
