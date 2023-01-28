@@ -30,7 +30,7 @@ class UsersController extends Controller
         $image=$request->image;
         $request->validate([//バリデーションを行う
             'user_name' => 'required|string|min:2|max:12',
-            'mail_address' => ['required','email','string','min:5','max:40',Rule::unique('users','mail')->ignore(Auth::user()->mail)],
+            'mail_address' => ['required','email','string','min:5','max:40',Rule::unique('users','mail')->ignore(Auth::id())],
             'bio' => 'required|string|max:150',
             'password' => 'required|string|min:8|max:20|alpha_dash|confirmed',//confirmedは最初に書く
             'password_confirmation' => 'required|string|min:8|max:20|alpha_dash',//名前_confirmation

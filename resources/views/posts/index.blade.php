@@ -31,7 +31,6 @@
 <div class="btn">
     <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか。')">
     <img class="h" src="images/trash-h.png">
-    <img class="tra" src="images/trash.png">
 </a>
 </div>        
 <!-- 投稿の編集ボタン -->

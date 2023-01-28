@@ -7,18 +7,18 @@
     })
     
 })
-$('.btn a').hover(
+
+$(function(){
+$('.btn').children('img').hover(
   function() {
       
       //マウスカーソルが重なった時の処理
-      
-      $('.btn img:nth-of-type(1)').css('display','none');
-      $('.btn img:nth-of-type(2)').css('display','block');
+      $(this).attr('src', 'images/trash.png');
   },
   function() {
-    $('.btn img:nth-of-type(2)').css('display','none');
-    $('.btn img:nth-of-type(1)').css('display','block');
+    $(this).attr('src', 'images/trash-h.png');
   });
+});
 $(function(){
   // 編集ボタン(class="js-modal-open")が押されたら発火
   $('.js-modal-open').on('click',function(){

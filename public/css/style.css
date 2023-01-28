@@ -6,6 +6,7 @@ body{
 /* header */
 header{
     background:#186AC9;
+    margin-top: -40px;
 }
 
 .login{
@@ -16,7 +17,7 @@ header{
 .atlas{
     position: relative;
     top:75px;
-    left:75px
+    left:75px;
 }
 /* main content */
 #row{
@@ -46,10 +47,11 @@ header{
 .post-create{
     position: relative;
     left:945px;
-    top:-40px
+    top:-40px;
+    padding-top: -10px;
 }
 .post-username{
-    margin-top: -10px;
+    padding-top: -60px;
 }
 .followlist-create{
     position: relative;
