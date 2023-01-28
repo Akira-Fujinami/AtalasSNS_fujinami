@@ -90,7 +90,7 @@ class RegisterController extends Controller
             $data = $request->input();//値を取得できる
             $this->validate($request,[//バリデーションを行う
                 'username' => 'required|string|min:2|max:12',
-                'mail' => 'required|string|min:5|max:40|unique:users',
+                'mail_address' => 'required|string|email|min:5|max:40|unique:users,mail',
                 'password' => 'required|string|min:8|max:20|alpha_dash|confirmed',//confirmedは最初に書く
                 'password_confirmation' => 'required|string|min:8|max:20|alpha_dash']);//名前_confirmation
             $this->create($data);//値を保存する

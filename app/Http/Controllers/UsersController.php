@@ -7,6 +7,7 @@ use App\Post;
 use Auth;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 
 
@@ -28,11 +29,11 @@ class UsersController extends Controller
         $up_PW=$request->input('password');
         $image=$request->image;
         $request->validate([//バリデーションを行う
-            'user_name' => 'required|string|max:255',
-            'mail_address' => 'required|string|email|max:255',
+            'user_name' => 'required|string|min:2|max:12',
+            'mail_address' => ['required','email','string','min:5','max:40',Rule::unique('users','mail')->ignore(Auth::user()->mail)],
             'bio' => 'required|string|max:150',
-            'password' => 'required|string|min:4|confirmed',//confirmedは最初に書く
-            'password_confirmation' => 'required|string|min:4',//名前_confirmation
+            'password' => 'required|string|min:8|max:20|alpha_dash|confirmed',//confirmedは最初に書く
+            'password_confirmation' => 'required|string|min:8|max:20|alpha_dash',//名前_confirmation
             'image'=>'image|mimes:jpeg,png,jpg,gif']);
             if(isset($image)){
                 $upimages=$image->store('','public');

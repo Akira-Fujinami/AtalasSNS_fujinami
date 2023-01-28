@@ -17,10 +17,10 @@
 </div>
 
 {{ Form::label('mail','',['class'=>'username']) }}
-{{ Form::text('mail',null,['class' => 'inputer']) }}
+{{ Form::text('mail_address',null,['class' => 'inputer']) }}
 <div class="message">
-		@if($errors->has('mail'))
-			@foreach($errors->get('mail') as $message)
+		@if($errors->has('mail_address'))
+			@foreach($errors->get('mail_address') as $message)
 				{{ $message }}<br>
 			@endforeach
 		@endif 

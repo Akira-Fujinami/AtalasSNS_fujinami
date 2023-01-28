@@ -7,24 +7,24 @@
     })
     
 })
-$('.btn').hover(
+$('.btn a').hover(
   function() {
       
       //マウスカーソルが重なった時の処理
+      
       $('.btn img:nth-of-type(1)').css('display','none');
       $('.btn img:nth-of-type(2)').css('display','block');
   },
   function() {
-      
-      //マウスカーソルが離れた時の処理
-      $('.btn img:nth-of-type(2)').css('display', 'none');
-      $('.btn img:nth-of-type(1)').css('display', 'block');
-  }
-);
-
+    $('.btn img:nth-of-type(2)').css('display','none');
+    $('.btn img:nth-of-type(1)').css('display','block');
+  });
 $(function(){
   // 編集ボタン(class="js-modal-open")が押されたら発火
   $('.js-modal-open').on('click',function(){
+    $('.button-followlist').fadeOut();
+    $('.button-followlist-user').fadeOut();
+    $('.right').fadeOut();
       // モーダルの中身(class="js-modal")の表示
       $('.js-modal').fadeIn();
       // 押されたボタンから投稿内容を取得し変数へ格納
@@ -41,6 +41,9 @@ $(function(){
 
   // 背景部分や閉じるボタン(js-modal-close)が押されたら発火
   $('.js-modal-close').on('click',function(){
+    $('.button-followlist').fadeIn();
+    $('.button-followlist-user').fadeIn();
+    $('.right').fadeIn();
       // モーダルの中身(class="js-modal")を非表示
       $('.js-modal').fadeOut();
       return false;

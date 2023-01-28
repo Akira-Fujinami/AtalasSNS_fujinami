@@ -207,9 +207,11 @@ ul{
     margin-left:auto;
     color: #fff;
 }
-li:nth-child(2){
+li:nth-child(2) a{
     color:#ffffff;
     background-color: blue;
+    padding-left: 37px;
+    text-align: center;
     }
 .menu {
     width:20%;
@@ -217,7 +219,7 @@ li:nth-child(2){
     right:0;
     z-index: 1;
 }
-li:first-child{
+li:first-child a{
     color:#727272;
 }
 ul.right{

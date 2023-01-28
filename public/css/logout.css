@@ -165,7 +165,7 @@ a{
     border-radius: 10px;
     position: relative;
     left:80px;
-    top:180px;
+    top:200px;
     cursor: pointer;
     z-index: 2;
     padding-left: 20px;
@@ -195,13 +195,14 @@ h2{
     border-radius: 10px;
     top:130px
 }
-h7{
+h7 a{
     position: relative;
     left:0px;
-    top:200px;
+    top:210px;
     white-space: nowrap;
     z-index: 2;
     color: #ffffff;
+    background-color: transparent;
 }
 .username{
     display: flex;
