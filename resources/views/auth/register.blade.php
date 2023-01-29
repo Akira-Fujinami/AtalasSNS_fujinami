@@ -15,7 +15,7 @@
 			        @endforeach
 		        @endif 
             </div>
-    {{ Form::label('mail address','',['class'=>'username']) }}
+    {{ Form::label('mail address','',['class'=>'mail']) }}
         {{ Form::text('mail_address',null,['class' => 'inputer']) }}
             <div class="message">
 		        @if($errors->has('mail_address'))
@@ -25,7 +25,7 @@
 		        @endif  
             </div>
 
-    {{ Form::label('password','',['class'=>'username']) }}
+    {{ Form::label('password','',['class'=>'password']) }}
         {{ Form::password('password',['class' => 'inputer']) }}
             <div class="message">
 		        @if($errors->has('password'))
@@ -35,7 +35,7 @@
 		        @endif 
             </div>
 
-    {{ Form::label('password_confirmation','',['class'=>'username']) }}
+    {{ Form::label('password_confirmation','',['class'=>'password']) }}
         {{ Form::password('password_confirmation',['class' => 'inputer']) }}
             <div class="message">
 		        @if($errors->has('password_confirmation'))

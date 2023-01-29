@@ -20,32 +20,32 @@
 				            {{ $message }}<br>
 			            @endforeach
 		            @endif 
-                <dd class="user-name">mail address<input type="text" name="mail_address" class="input" value="{{ old('mail_address',  Auth::user()->mail) }}"></dd>
+                <dd class="email">mail address<input type="text" name="mail_address" class="input" value="{{ old('mail_address',  Auth::user()->mail) }}"></dd>
                     @if($errors->has('mail_address'))
 			            @foreach($errors->get('mail_address') as $message)
 				            {{ $message }}<br>
 			            @endforeach
 		            @endif 
-                <dd class="user-name">password<input type="password" class="input" name="password" ></dd>
+                <dd class="password">password<input type="password" class="input" name="password" ></dd>
                     @if($errors->has('password'))
 			            @foreach($errors->get('password') as $message)
 				            {{ $message }}<br>
 			            @endforeach
 		            @endif 
-                <dd class="user-name">password confirmation<input type="password" class="input" name="password_confirmation"></dd>
+                <dd class="password">password confirmation<input type="password" class="input" name="password_confirmation"></dd>
                     @if($errors->has('password_confirmation'))
 			            @foreach($errors->get('password_confirmation') as $message)
 				            {{ $message }}<br>
 			            @endforeach
 		            @endif 
-                <dd class="user-name">bio<textarea name="bio">{{Auth::user()->bio}}</textarea></dd>
+                <dd class="bio">bio<textarea name="bio">{{Auth::user()->bio}}</textarea></dd>
                     @if($errors->has('bio'))
 			            @foreach($errors->get('bio') as $message)
 				            {{ $message }}<br>
 			            @endforeach
 		            @endif 
                 </dd>
-                <dd class="user-name">icon image<input type="file" name="image" class="file"></dd>
+                <dd class="images">icon image<input type="file" name="image" class="file"></dd>
                     @if($errors->has('image'))
 			            @foreach($errors->get('image') as $message)
 				            {{ $message }}<br>

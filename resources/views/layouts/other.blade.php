@@ -1,7 +1,7 @@
 @extends('layouts.login')
 
 @section('content')
-<div id="top-bar-followlist">
+<div id="top-bar-others">
     @foreach ($others as $others)
         @if($others->images == "dawn.png")
             <div class="others-icon">
@@ -55,12 +55,12 @@
                         </div>
                     @endif
                     <div class="others-posts">
-                        <div class="others-create">{{$posts->user->username}}
+                        <div class="others-username">{{$posts->user->username}}
                         </div>
-                        <div class="others-post">{{$posts->created_at}}
+                        <div class="others-create">{{$posts->created_at}}
                         </div>
                     </div>
-                        <div class="others-username">{{$posts->post}}
+                        <div class="others-post">{{$posts->post}}
                         </div>
                     </td>
                 </div>

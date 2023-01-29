@@ -1,7 +1,7 @@
 @extends('layouts.login')
 
 @section('content')
-<div id="top-bar-followlist">
+<div id="top-bar-index">
     <form action="{{url('/post')}}" method="POST">
     @csrf
     @if(Auth::user()->images == "dawn.png")
@@ -13,7 +13,7 @@
             <img src="{{asset('storage/'.Auth::user()->images)}}" alt="user-image" class="post-image">
         </div>
     @endif
-        <input type="text" maxlength="150" class="text1" name="newPost" required placeholder="投稿内容を入力してください。">
+        <input type="text" maxlength="150" class="posts-text" name="newPost" required placeholder="投稿内容を入力してください。">
         <input type="image" class="post" src="images/post.png" alt="post">
     </form>
 </div>

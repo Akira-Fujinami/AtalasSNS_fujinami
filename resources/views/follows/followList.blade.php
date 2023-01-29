@@ -20,11 +20,11 @@
                 <a href="/others/{{$posts->user_id}}"><img src="{{asset('storage/'.$posts->user->images)}}" alt="follow-image" class="follow-post-image"></a>
             @endif
                 <div class="followlist-posts">
-                    <div class="followlist-post">{{$posts->user->username}}
+                    <div class="followlist-username">{{$posts->user->username}}
                     </div>
                     <div class="followlist-create">{{$posts->created_at}}
                     </div>
-                    <div class="followlist-username">{{$posts->post}}
+                    <div class="followlist-post">{{$posts->post}}
                     </div>
                 </div> 
         </div>

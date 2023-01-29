@@ -39,7 +39,7 @@ header{
     display: flex;
     width:100%;
 }
-.followlist-username{
+.followlist-post,.followerlist-post{
     position: relative;
     left:400px;
     top:-20px
@@ -53,12 +53,12 @@ header{
 .post-username{
     padding-top: -60px;
 }
-.followlist-create{
+.followlist-create,.followerlist-create{
     position: relative;
     left:950px;
     top:-80px;
 }
-.followlist-post{
+.followlist-username,.followerlist-username{
     position: relative;
     left:400px;
     bottom:60px
@@ -94,7 +94,7 @@ header{
     width:10%;
     border-radius: 40%;
 }
-.user-name {
+.user-name,.email,.password,.bio,.images {
     margin-bottom: 1rem;
     border: 0;
     position: relative;
@@ -118,7 +118,7 @@ header{
     display: table;
   }
 
-.others-create{
+.others-username{
     position: relative;
     left:200px;
     top:-40px
@@ -170,7 +170,7 @@ header{
     top:-10px;
     border-top:7px solid #C8C8C8;
 }
-#top-bar-followlist{
+#top-bar-index,#top-bar-others{
     border-bottom:7px solid #C8C8C8;
 }
 #top-bar-followerlist{
@@ -409,7 +409,7 @@ left:1050px;
     left:450px;
     margin-top: 40px;
 }
-.text1{
+.posts-text{
     display: inline-block;
     width: 80%;
     padding: 0.3em;
@@ -477,7 +477,7 @@ left:1050px;
     top:500px;
     left:1200px
 }
-.username6{
+.username-auth{
     position: relative;
     left: 50px;
     padding-top: 40px;
@@ -585,12 +585,12 @@ dd{
     display: flex;
     justify-content: space-between;
 }
-.others-post{
+.others-create{
     position: relative;
     left:950px;
     top:-60px
 }
-.others-username{
+.others-post{
     position: relative;
     left:200px
 }

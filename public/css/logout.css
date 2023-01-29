@@ -141,7 +141,7 @@ p{
     background-color: red;
     border-radius: 5px;
     position: relative;
-    left:750px;
+    left:757px;
     top:50px;
     padding: 5px 15px 5px 15px;
     color: #fff;
@@ -207,7 +207,7 @@ h6 a{
     color: #fff;
     background-color: transparent;
 }
-.username{
+.username,.mail,.password{
     display: flex;
     justify-content: space-between;
     position: relative;

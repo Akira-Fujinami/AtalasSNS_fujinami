@@ -62,7 +62,7 @@
                 </div >
                     <div id="side-bars">
                         <div id="confirm"class="side-bar">
-                            <h6 class="username6">{{Auth::user()->username}}さんの</p>
+                            <h6 class="username-auth">{{Auth::user()->username}}さんの</p>
                         <div>
                         <div class="follow">
                             <div class="follow-number">フォロー数
