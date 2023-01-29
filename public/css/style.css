@@ -173,7 +173,7 @@ header{
 #top-bar-index,#top-bar-others{
     border-bottom:7px solid #C8C8C8;
 }
-#top-bar-followerlist{
+#top-bar-followerlist,#top-bar-followlist{
     border-bottom: 7px solid #C8C8C8;
 }
 #center-bar{
