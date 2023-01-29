@@ -63,42 +63,31 @@ header{
     left:400px;
     bottom:60px
 }
-.icon{
+.profile-image{
     width:10%;
     position: relative;
     left: 80px;
     top: 80px;
     border-radius:40%
 }
-.icon-3{
+.user-image{
     position: relative;
-    left:50px;
-    top:130px
-}
-.icon-4{
-    position: relative;
-    left:50px;
-    top:10px;
+    left:1300px;
+    top:25px;
     width:7%;
     border-radius: 40%;
 }
-.icon98{
+.profile-icon{
     position: relative;
     left:100px;
     top:70px
 }
-.icon100{
-    position: relative;
-    left:50px;
-    top:20px;
-    margin-bottom: 20px;
-}
-.icon110{
+.others-post-icon{
     position: relative;
     left:30px;
     top:20px
 }
-.icon111{
+.others-post-image{
     position:relative;
     top:10px;
     left:30px;
@@ -134,14 +123,14 @@ header{
     left:200px;
     top:-40px
 }
-.icon-13{
+.follower-image,.follow-image{
     position: relative;
     left:250px;
     width:10%;
     top:-10px;
     border-radius: 40%;
 }
-.icon101{
+.others-image{
     width:10%;
     position: relative;
     left:100px;
@@ -149,24 +138,31 @@ header{
     border-radius: 40%;
     margin-bottom: 20px;
 }
-.icon-54{
+.user-icon{
     position: relative;
-    left:1300px;
-    top:25px
+    left:20px;
+    top:70px
 }
 .icon-20{
     margin-top: 100px;
 }
-.icon-14{
+.follower-icon,.follow-icon{
     position: relative;
     left:250px;
     top:-10px
 }
-.icon-56{
+.user-post-image{
     width:7%;
     position:relative;
-    left:1300px;
+    left:70px;
     top:20px;
+    border-radius: 40%;
+}
+.post-image{
+    width:7%;
+    position:relative;
+    left:15px;
+    top:70px;
     border-radius: 40%;
 }
 #top-bar{
@@ -210,7 +206,7 @@ ul{
     color: #fff;
 }
 li:nth-child(2) a{
-    color:#ffffff;
+    color:#fff;
     background-color: blue;
     padding-left: 37px;
     text-align: center;
@@ -244,26 +240,26 @@ h1{
     left:80px;
     top:10px
 }
-.icon-21{
+.top-icon{
     position: relative;
-    left:10px;
-    top:90px
+    left:1300px;
+    top:30px
 }
-.icon-10{
+.others-icon{
     position: relative;
-    top:-16px;
+    top:10px;
     width:10%;
-    left:230px;
+    left:160px;
     border-radius: 40%;
 }
-.icon-11{
+.follower-post-image,.follow-post-image{
     width:10%;
     position: relative;
     left:180px;
     margin-top:10px;
     border-radius: 40%;
 }
-.icon-12{
+.follower-post-icon,.follow-post-icon{
     position: relative;
     top:10px;
     left:200px;
@@ -310,8 +306,8 @@ dt.open::after {
 .post{
 width: 100px;
 position: relative;
-top:50px;
-right:-60px
+top:40px;
+right:-100px;
 }
 .posting-username{
     margin-top: -30px;
@@ -339,7 +335,6 @@ left:1050px;
 }
 .btn img:nth-of-type(2){
     width:40px;
-    margin-left: 0px;
     margin-bottom: 10px;
     display: none;
 }
@@ -378,12 +373,11 @@ left:1050px;
     top:-40px;
     width:30%;
 }
-.search-image{
+.search-images{
     width:80px;
     position: relative;
     left:50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     border-radius: 10px;
 }
 .searching{
@@ -392,7 +386,7 @@ left:1050px;
     margin-top: -20px;
     display: flex;
 }
-.icon-99{
+.search-user{
     padding:10px;
     width:7%;
     scale: 0.7;
@@ -400,11 +394,11 @@ left:1050px;
     position: relative;
     left:300px;
 }
-.icon-51{
+.search-image{
     position: relative;
     width:7%;
     margin-top: 30px;
-    left:270px;
+    left:-220px;
     top:-15px;
     padding-left: 40px;
     padding-right: 40px;
@@ -424,8 +418,8 @@ left:1050px;
     margin: 0.3em 0;
     line-height: 5;
     position: relative;
-    top:-20px;
-    left:80px
+    top:-50px;
+    left:100px;
 }
 .text2{
     display: inline-block;
@@ -439,8 +433,7 @@ left:1050px;
 .btn-follow{
     position: absolute;
     left:850px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin:40px 0px 40px 0px;
     background-color: blue;
     color: #fff;
     border-radius: 5px;
@@ -449,19 +442,17 @@ left:1050px;
 .btn-unfollow{
     position: absolute;
     left:850px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin:40px 0px 40px 0px;
     background-color: red;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 0px 12px 0px 12px;
 }
 .button-followlist{
     width:100px;
     font-size:12px;
-    color:#FFFFFF;
+    color:#FFF;
     text-align:center;
     display:block;
     padding:10px 0 10px;
@@ -470,8 +461,7 @@ left:1050px;
     cursor: pointer;
     position: relative;
     left:100px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin:20px 0px 20px 0px;
 }
 .button-followlist-user{
     width:100px;
@@ -500,9 +490,10 @@ left:1050px;
     padding-bottom: -200px;
 }
 .number{
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-bottom: -200px;
+    padding: 30px 0px -200px 40px;
+    position: relative;
+    left:20px;
+    top:30px
 }
 .header-menu{
     display: flex;
@@ -544,13 +535,11 @@ dd{
     font-size: x-large;
     border-radius: 10px;
     background-color: red;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0px 60px 0px 60px;
     color: #ffffff;
 }
 .mail{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0px 100px 0px 100px;
 }
 .user-name{
     position: relative;
@@ -566,31 +555,31 @@ dd{
 .other-name{
     position: absolute;
     left:270px;
-    top:170px;
+    top:135px;
     font-size: large;
 }
 .others-name{
     position: absolute;
     left:400px;
-    top:170px;
+    top:135px;
     font-size: large;
 }
 .other-bio{
     font-size: large;
     position:absolute;
     left:280px;
-    top:200px
+    top:170px
 }
 .others-bio{
     font-size: large;
     position: absolute;
     left:400px;
-    top:200px
+    top:170px
 }
 .other-follow{
     position: absolute;
     left:0px;
-    top:140px;
+    top:120px;
 }
 .other-posts{
     display: flex;

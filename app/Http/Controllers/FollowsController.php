@@ -56,9 +56,9 @@ class FollowsController extends Controller
     public function others($user_id){
         $others=User::where('id',$user_id)->get();
         $posts=Post::with('user')->where('user_id',$user_id)->orderby('created_at','desc')->get();
-        return view('layouts.otherProfile',['others'=>$others,'posts'=>$posts]);
+        return view('layouts.other',['others'=>$others,'posts'=>$posts]);
     }
-    public function othersfollow(Request $request){
+    public function othersFollow(Request $request){
         $followed_id=$request->input('id');
         Follow::create([
             'following_id'=>Auth::id(),
@@ -66,7 +66,7 @@ class FollowsController extends Controller
         ]);
         return back();
     }
-    public function othersunfollow(Request $request){
+    public function othersUnfollow(Request $request){
         $followed_id=$request->input('id');
         Follow::where('following_id',Auth::id())->where('followed_id',$followed_id)->delete();
         return back();

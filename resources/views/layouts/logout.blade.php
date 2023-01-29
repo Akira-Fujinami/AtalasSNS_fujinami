@@ -21,13 +21,13 @@
 </head>
 <body>
   <header>
-    
-    <h1><img src="images/atlas.png"></h1>
-    <h16 class="title">Social Network Service</h16></div>
+  <title>AtlasSNS</title>
+    <h1><img src="images/atlas.png" alt="atlas-icon"></h1>
+    <p class="title">Social Network Service</p>
   </header>
   <div id="container">
+   </div> 
     @yield('content')
-
   <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
 </body>

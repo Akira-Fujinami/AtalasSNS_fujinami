@@ -3,7 +3,8 @@
 @section('content')
 
 {!! Form::open(['url' => 'login']) !!}
-<div class="login"></div>
+<div class="login">
+</div>
 <p>AtlasSNSへようこそ</p>
 
 {{ Form::label('mail_address','',['class' => 'mail-address']) }}

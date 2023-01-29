@@ -4,10 +4,10 @@
 
 <div id="clear"></div>
   <div class="added">
-  <h10>{{session('username')}}さん</h10>
-  <h11>ようこそ！AtlasSNSへ！</h11>
-  <h12>ユーザー登録が完了しました。</h12>
-  <h13>早速ログインをしてみましょう。</h13>
+  <p class="added-username">{{session('username')}}さん</p>
+  <p class="added-title">ようこそ！AtlasSNSへ！</p>
+  <p class="added-message">ユーザー登録が完了しました。</p>
+  <p class="go-login">早速ログインをしてみましょう。</p>
 
   <a href="/login">ログイン画面へ</a>
 </div>
