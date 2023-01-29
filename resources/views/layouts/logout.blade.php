@@ -26,9 +26,9 @@
     <p class="title">Social Network Service</p>
   </header>
   <div id="container">
-   </div> 
+  </div> 
     @yield('content')
-  <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>
