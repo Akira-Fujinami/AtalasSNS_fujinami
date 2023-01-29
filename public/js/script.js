@@ -22,6 +22,8 @@ $('.btn img').hover(
 $(function(){
   // 編集ボタン(class="js-modal-open")が押されたら発火
   $('.js-modal-open').on('click',function(){
+    $('.user-post-icon').fadeOut();
+    $('.user-post-image').fadeOut();
     $('.button-followlist').fadeOut();
     $('.button-followlist-user').fadeOut();
     $('.right').fadeOut();
@@ -41,6 +43,8 @@ $(function(){
 
   // 背景部分や閉じるボタン(js-modal-close)が押されたら発火
   $('.js-modal-close').on('click',function(){
+    $('.user-post-icon').fadeIn();
+    $('.user-post-image').fadeIn();
     $('.button-followlist').fadeIn();
     $('.button-followlist-user').fadeIn();
     $('.right').fadeIn();

@@ -20,7 +20,7 @@
         @foreach ($list as $list)
             <div id="center-bar">
                 @if($list->user->images == "dawn.png")
-                    <div class="icon-50">
+                    <div class="user-post-icon">
                         <img src="{{asset('images/icon1.png')}}" alt="user-icon">
                     </div>
                 @else
