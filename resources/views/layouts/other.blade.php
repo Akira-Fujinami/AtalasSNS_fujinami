@@ -45,23 +45,23 @@
             @foreach ($posts as $posts)
                 <div id="center-bar">
                     <td>
-                    @if($posts->user->images == "dawn.png")
-                        <div class="others-post-icon">
-                            <img src="/images/icon1.png" alt="others-post-icon">
+                        @if($posts->user->images == "dawn.png")
+                            <div class="others-post-icon">
+                                <img src="/images/icon1.png" alt="others-post-icon">
+                            </div>
+                        @else
+                            <div>
+                                <img src="{{asset('storage/'.$posts->user->images)}}" alt="others-post-image" class="others-post-image">
+                            </div>
+                        @endif
+                        <div class="others-posts">
+                            <div class="others-username">{{$posts->user->username}}
+                            </div>
+                            <div class="others-create">{{$posts->created_at}}
+                            </div>
                         </div>
-                    @else
-                        <div>
-                            <img src="{{asset('storage/'.$posts->user->images)}}" alt="others-post-image" class="others-post-image">
-                        </div>
-                    @endif
-                    <div class="others-posts">
-                        <div class="others-username">{{$posts->user->username}}
-                        </div>
-                        <div class="others-create">{{$posts->created_at}}
-                        </div>
-                    </div>
-                        <div class="others-post">{{$posts->post}}
-                        </div>
+                            <div class="others-post">{{$posts->post}}
+                            </div>
                     </td>
                 </div>
             @endforeach

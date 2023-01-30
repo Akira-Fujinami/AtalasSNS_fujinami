@@ -53,5 +53,6 @@
 		            @endif 
                 <button type="submit" class="btn-update">更新</button>
             </div>
+        </ol>
         </form>
 @endsection

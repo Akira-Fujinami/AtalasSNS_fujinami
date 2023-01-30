@@ -17,10 +17,9 @@ h1{
     text-align: center;
     position: relative;
     top:180px;
-    left:0px;
+    left:-20px;
     color: white;
     font-size: xx-large;
-    scale: 0.7;
 }
 #register{
     margin       : auto;

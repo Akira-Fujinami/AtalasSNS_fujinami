@@ -79,12 +79,12 @@
                             <div class="number">{{ Auth::user()->followers()->count() }}名
                             </div>
                         </div>
-                            <a href="/followerList"><div class="button-followlist">フォロワーリスト
+                            <a href="/followerList"><div class="button-followerlist">フォロワーリスト
                             </div></a>
                         </div>
                         <div id="side-center-bar">
                         </div>
-                            <a href="/search"><div class="button-followlist-user">ユーザー検索
+                            <a href="/search"><div class="user-search">ユーザー検索
                             </div></a>
                         </div>
                     </div>

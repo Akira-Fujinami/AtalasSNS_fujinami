@@ -61,7 +61,6 @@
                 </div>
             @else
             @endif
-        </tr>
-        </div>
+            </div>
 @endforeach
 @endsection

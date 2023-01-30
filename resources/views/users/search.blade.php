@@ -21,7 +21,7 @@
                             <img src="{{asset('storage/'.$search->images)}}" alt="search-user-image" class="search-image">
                         </div>
                     @endif
-                    <div class="searcher">
+                    <div class="search-name">
                         {{ $search->username }}
                     </div>
                     @if (Auth::user()->isFollowing($search->id))
