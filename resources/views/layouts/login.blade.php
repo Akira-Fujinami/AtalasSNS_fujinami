@@ -54,8 +54,6 @@
                     </ul></dl>
                 </nav>
         </div>
-
-    
                 <div id="row">
                     <div id="container">
                     @yield('content')

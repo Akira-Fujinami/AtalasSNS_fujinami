@@ -1,7 +1,6 @@
 @extends('layouts.logout')
 
 @section('content')
-
 {!! Form::open(['url' => 'login']) !!}
 <div class="login">
 </div>
@@ -16,5 +15,4 @@
 <p><a href="/register">新規ユーザーの方はこちら</a></p>
 
 {!! Form::close() !!}
-
 @endsection
