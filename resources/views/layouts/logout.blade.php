@@ -21,7 +21,7 @@
 </head>
 <body>
   <header>
-  <title>AtlasSNS</title>
+    <title>AtlasSNS</title>
     <h1><img src="images/atlas.png" alt="atlas-icon"></h1>
     <p class="title">Social Network Service</p>
   </header>
@@ -29,6 +29,6 @@
     @yield('content')
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
-</div>
+  </div>
 </body>
 </html>

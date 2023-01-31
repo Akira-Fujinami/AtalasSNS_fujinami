@@ -35,59 +35,57 @@
                     <img src="{{asset('storage/'.Auth::user()->images)}}" alt="user-icon" class="user-image">
                 </div>
             @endif
-                <div class="header-menu">
-                    <div class="login-user">{{Auth::user()->username}}     さん
-                    </div>
-                    <div class="accordion">
-                        <dl><dt>
-                        </dt>
-                    </div>
+            <div class="header-menu">
+                <div class="login-user">{{Auth::user()->username}}     さん
                 </div>
-    </header>
-
-                <nav class="menu">
-                    <ul class="right">
-                        <li><a href="/top">HOME</a></li>
-                        <li><a href="/profile">プロフィール編集</a></li>
-                        <li><a href="/logout">ログアウト</a></li>
-                        </li>
-                    </ul></dl>
-                </nav>
+                <div class="accordion">
+                    <dl><dt>
+                    </dt>
+                </div>
+            </div>
         </div>
-                <div id="row">
-                    <div id="container">
-                    @yield('content')
-                </div >
-                    <div id="side-bars">
-                        <div id="confirm"class="side-bar">
-                            <h6 class="username-auth">{{Auth::user()->username}}さんの</p>
-                        <div>
-                        <div class="follow">
-                            <div class="follow-number">フォロー数
-                            </div>
-                            <div class="number">{{ Auth::user()->follows()->count() }}名
-                            </div>
-                        </div>
-                    </div>
-                            <a href="/followList"><div class="button-followlist">フォローリスト
-                            </div></a>
-                        <div class="follow">
-                            <div class="follow-number">フォロー数
-                            </div>
-                            <div class="number">{{ Auth::user()->followers()->count() }}名
-                            </div>
-                        </div>
-                            <a href="/followerList"><div class="button-followerlist">フォロワーリスト
-                            </div></a>
-                        </div>
-                        <div id="side-center-bar">
-                        </div>
-                            <a href="/search"><div class="user-search">ユーザー検索
-                            </div></a>
-                        </div>
-                    </div>
-     <footer>
-     </footer>
+    </header>
+    <nav class="menu">
+        <ul class="right">
+            <li><a href="/top">HOME</a></li>
+            <li><a href="/profile">プロフィール編集</a></li>
+            <li><a href="/logout">ログアウト</a></li>
+        </ul></dl>
+    </nav>
+    <div id="row">
+        <div id="container">
+            @yield('content')
+        </div >
+        <div id="side-bars">
+            <div id="confirm"class="side-bar">
+                <h6 class="username-auth">{{Auth::user()->username}}さんの</p>
+            <div>
+            <div class="follow">
+                <div class="follow-number">フォロー数
+            </div>
+            <div class="number">{{ Auth::user()->follows()->count() }}名
+            </div>
+        </div>
+    </div>
+    <div class="button-followlist">
+        <a href="/followList">フォローリスト</a>
+    </div>
+    <div class="follow">
+        <div class="follow-number">フォロー数
+        </div>
+        <div class="number">{{ Auth::user()->followers()->count() }}名
+        </div>
+    </div>
+    <div class="button-followerlist">
+        <a href="/followerList">フォロワーリスト</a>
+    </div></div>
+    <div id="side-center-bar">
+        <div class="user-search">
+            <a href="/search">ユーザー検索</a>
+        </div>
+    </div>
+    <footer>
+    </footer>
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
 </body>
