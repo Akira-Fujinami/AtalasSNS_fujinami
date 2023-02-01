@@ -25,10 +25,8 @@
     <h1><img src="images/atlas.png" alt="atlas-icon"></h1>
     <p class="title">Social Network Service</p>
   </header>
-  <div class="wrap">
     @yield('content')
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
-  </div>
 </body>
 </html>

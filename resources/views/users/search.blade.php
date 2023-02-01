@@ -27,8 +27,7 @@
         @if (Auth::user()->isFollowing($search->id))
             {{Form::open(['url'=>'/unfollow/{id}'])}}
                 {{Form::hidden('id',$search->id)}}
-                    <td>{{Form::submit('フォロー解除',['class'=>'btn-unfollow'])}}
-                    </td>
+                    {{Form::submit('フォロー解除',['class'=>'btn-unfollow'])}}
             {{Form::close()}}
         @else
             {{Form::open(['url'=>'/follow/{id}'])}}
