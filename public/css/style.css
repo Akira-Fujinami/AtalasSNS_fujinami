@@ -41,8 +41,8 @@ header {
 }
 .followlist-post,
 .followerlist-post {
+    margin-left: 30%;
     position: relative;
-    left: 400px;
     top: -20px;
 }
 .post-create {
@@ -56,14 +56,14 @@ header {
 }
 .followlist-create,
 .followerlist-create {
+    margin-left: 82%;
     position: relative;
-    left: 950px;
-    top: -80px;
+    top: -75px;
 }
 .followlist-username,
 .followerlist-username {
+    margin-left: 30%;
     position: relative;
-    left: 400px;
     bottom: 60px;
 }
 .profile-image {
@@ -145,8 +145,9 @@ input.file {
 }
 .follower-image,
 .follow-image {
+    margin-left: -5px;
     position: relative;
-    left: 250px;
+    left: 20.5%;
     width: 65px;
     height: 65px;
     top: -10px;
@@ -173,9 +174,10 @@ input.file {
 }
 .follower-icon,
 .follow-icon {
+    margin-left: 5px;
     position: relative;
-    left: 250px;
-    top: -10px;
+    left: 20%;
+    bottom: 10px;
 }
 .user-post-image {
     width: 50px;
@@ -257,7 +259,7 @@ ul.right {
 h1 {
     position: relative;
     top: 30px;
-    left: 100px;
+    left: 80px;
     font-weight: bold;
     font-size: x-large;
 }
@@ -288,7 +290,7 @@ h1 {
     width: 65px;
     height: 65px;
     position: relative;
-    left: 180px;
+    left: 20%;
     margin-top: 10px;
     border-radius: 1300px;
     object-fit: cover;
@@ -296,8 +298,8 @@ h1 {
 .follower-post-icon,
 .follow-post-icon {
     position: relative;
+    left: 20%;
     top: 10px;
-    left: 200px;
 }
 .username {
     display: flex;
@@ -367,6 +369,9 @@ input.post {
     position: relative;
     top: 55px;
 }
+.btn a {
+    display: block;
+}
 .btn img:nth-of-type(2) {
     width: 40px;
     margin-bottom: 10px;
@@ -426,21 +431,21 @@ input.post {
     scale: 0.7;
     padding-top: 10px;
     position: relative;
-    left: 300px;
+    left: 30%;
 }
 .search-image {
     position: relative;
     width: 48px;
     height: 48px;
     object-fit: cover;
-    left: 323px;
-    bottom: 14px;
+    left: 360px;
+    bottom: 10px;
     margin-top: 30px;
     border-radius: 1300px;
 }
 .search-name {
     position: absolute;
-    left: 450px;
+    left: 35%;
     margin-top: 40px;
 }
 .posts-text {
