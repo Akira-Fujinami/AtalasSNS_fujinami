@@ -43,7 +43,9 @@
                     </a>
                 </div>        
 <!-- 投稿の編集ボタン -->
-                <a class="js-modal-open image" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" alt="編集ボタン"></a>
+                <a class="js-modal-open image" href="/top/{{$list->id}}/" post="{{ $list->post }}" post_id="{{ $list->id }}">
+                    <img src="images/edit.png" alt="編集ボタン">
+                </a>
         <!-- モーダルの中身 -->
                 <div class="modal js-modal">
                     <div class="modal__bg js-modal-close"></div>
@@ -56,7 +58,8 @@
                             <input type="image" class="update" src="images/edit.png" alt="編集ボタン">
                         {!! Form::close() !!}
                         {{ csrf_field() }}
-                        <a class="js-modal-close" href="/top"></a>
+                        <a class="js-modal-close" href="/top">
+                        </a>
                     </div>
                 </div>
             @else

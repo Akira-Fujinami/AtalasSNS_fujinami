@@ -24,7 +24,11 @@
     <header>
         <div class="container">
             <div id = "head">
-                <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}" alt="Atlas"></a></p>
+                <p class="atlas">
+                    <a href="/top">
+                        <img src="{{asset('images/atlas.png')}}" alt="Atlas">
+                    </a>
+                </p>
             </div>
             @if(Auth::user()->images == "dawn.png")
                 <div class="top-icon">
@@ -56,7 +60,7 @@
     </nav>
     <div id="row">
         <div id="container">
-            @yield('content')
+        @yield('content')
         </div >
         <div id="side-bars">
             <div id="confirm"class="side-bar">

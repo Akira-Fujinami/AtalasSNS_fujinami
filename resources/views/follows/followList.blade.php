@@ -15,9 +15,13 @@
     @foreach($posts as $posts)
         <div id="center-bar">
             @if($posts->user->images == "dawn.png")
-                <a href="/others/{{$posts->user_id}}"><img src="{{asset('images/icon1.png')}}" alt="フォロー中のアイコン" class="follow-post-icon"></a>
+                <a href="/others/{{$posts->user_id}}">
+                    <img src="{{asset('images/icon1.png')}}" alt="フォロー中のアイコン" class="follow-post-icon">
+                </a>
             @else
-                <a href="/others/{{$posts->user_id}}"><img src="{{asset('storage/'.$posts->user->images)}}" alt="フォロー中のアイコン" class="follow-post-image"></a>
+                <a href="/others/{{$posts->user_id}}">
+                    <img src="{{asset('storage/'.$posts->user->images)}}" alt="フォロー中のアイコン" class="follow-post-image">
+                </a>
             @endif
             <div class="followlist-posts">
                 <div class="followlist-username">{{$posts->user->username}}
