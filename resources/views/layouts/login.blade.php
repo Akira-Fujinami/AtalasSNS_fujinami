@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>AtlasSNS</title>
 <meta charset="utf-8" />
     <!--IEブラウザ対策-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,26 +22,27 @@
 </head>
 <body>
     <header>
-        <title>AtlasSNS</title>
         <div class="container">
             <div id = "head">
-                <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}" alt="atlas"></a></p>
+                <p class="atlas"><a href="/top"><img src="{{asset('images/atlas.png')}}" alt="Atlas"></a></p>
             </div>
             @if(Auth::user()->images == "dawn.png")
                 <div class="top-icon">
-                    <img src="{{asset('images/icon1.png')}}" alt="user-icon">
+                    <img src="{{asset('images/icon1.png')}}" alt="ユーザーのアイコン">
                 </div>
             @else
                 <div>
-                    <img src="{{asset('storage/'.Auth::user()->images)}}" alt="user-icon" class="user-image">
+                    <img src="{{asset('storage/'.Auth::user()->images)}}" alt="ユーザーのアイコン" class="user-image">
                 </div>
             @endif
             <div class="header-menu">
                 <div class="login-user">{{Auth::user()->username}}     さん
                 </div>
                 <div class="accordion">
-                    <dl><dt>
-                    </dt>
+                    <dl>
+                        <dt>
+                        </dt>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -50,7 +52,7 @@
             <li><a href="/top">HOME</a></li>
             <li><a href="/profile">プロフィール編集</a></li>
             <li><a href="/logout">ログアウト</a></li>
-        </ul></dl>
+        </ul>
     </nav>
     <div id="row">
         <div id="container">
@@ -71,7 +73,7 @@
         <a href="/followList">フォローリスト</a>
     </div>
     <div class="follow">
-        <div class="follow-number">フォロー数
+        <div class="follower-number">フォロワー数
         </div>
         <div class="number">{{ Auth::user()->followers()->count() }}名
         </div>

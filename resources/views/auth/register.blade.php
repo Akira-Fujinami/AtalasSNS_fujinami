@@ -1,10 +1,10 @@
 @extends('layouts.logout')
-
 @section('content')
     <div id="register"></div>
     {!! Form::open(['url' => 'register']) !!}
-    <h2>新規ユーザー登録</h2>
-	{{ Form::label('username','',['class'=>'username']) }}
+        <div class="new-register">新規ユーザー登録
+        </div>
+	    {{ Form::label('username','',['class'=>'username']) }}
         {{ Form::text('username',null,['class' => 'inputer-name']) }}
         <div class="message-name">
 		    @if($errors->has('username'))
@@ -40,7 +40,8 @@
 			    @endforeach
 		    @endif 
         </div>
-    {{ Form::submit('REGISTER',['class'=>'outpter']) }}
-    <h6><a href="/login">ログイン画面へ戻る</a></h6>
+        {{ Form::submit('REGISTER',['class'=>'outpter']) }}
+        <div class="back-login"><a href="/login">ログイン画面へ戻る</a>
+	    </div>
     {!! Form::close() !!}
 @endsection

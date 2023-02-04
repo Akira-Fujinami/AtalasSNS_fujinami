@@ -24,8 +24,9 @@ $(function () {
     $(".js-modal-open").on("click", function () {
         $(".user-post-icon").fadeOut();
         $(".user-post-image").fadeOut();
+        $(".user-search").fadeOut();
         $(".button-followlist").fadeOut();
-        $(".button-followlist-user").fadeOut();
+        $(".button-followerlist").fadeOut();
         $(".right").fadeOut();
         // モーダルの中身(class="js-modal")の表示
         $(".js-modal").fadeIn();
@@ -45,8 +46,9 @@ $(function () {
     $(".js-modal-close").on("click", function () {
         $(".user-post-icon").fadeIn();
         $(".user-post-image").fadeIn();
+        $(".user-search").fadeIn();
         $(".button-followlist").fadeIn();
-        $(".button-followlist-user").fadeIn();
+        $(".button-followerlist").fadeIn();
         $(".right").fadeIn();
         // モーダルの中身(class="js-modal")を非表示
         $(".js-modal").fadeOut();

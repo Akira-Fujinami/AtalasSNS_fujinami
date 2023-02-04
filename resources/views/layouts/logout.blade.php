@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>AtlasSNS</title>
   <meta charset="utf-8" />
   <!--IEブラウザ対策-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,8 +22,8 @@
 </head>
 <body>
   <header>
-    <title>AtlasSNS</title>
-    <h1><img src="images/atlas.png" alt="atlas-icon"></h1>
+    <div class="atlas"><img src="images/atlas.png" alt="Atlas">
+    </div>
     <p class="title">Social Network Service</p>
   </header>
     @yield('content')
