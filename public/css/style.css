@@ -260,8 +260,8 @@ ul.right {
 }
 .top-icon {
     position: relative;
-    left: 93%;
-    top: 25px;
+    top: 30px;
+    margin-left: 1350px;
 }
 .others-icon {
     position: relative;
