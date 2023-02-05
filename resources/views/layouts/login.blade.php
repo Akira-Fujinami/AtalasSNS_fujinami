@@ -30,6 +30,15 @@
                     </a>
                 </p>
             </div>
+            <div class="header-menu">
+            <div class="login-user">{{Auth::user()->username}}     さん
+                </div>
+                <div class="accordion">
+                    <dl>
+                        <dt>
+                        </dt>
+                    </dl>
+                </div>
             @if(Auth::user()->images == "dawn.png")
                 <div class="top-icon">
                     <img src="{{asset('images/icon1.png')}}" alt="ユーザーのアイコン">
@@ -39,15 +48,6 @@
                     <img src="{{asset('storage/'.Auth::user()->images)}}" alt="ユーザーのアイコン" class="user-image">
                 </div>
             @endif
-            <div class="header-menu">
-                <div class="login-user">{{Auth::user()->username}}     さん
-                </div>
-                <div class="accordion">
-                    <dl>
-                        <dt>
-                        </dt>
-                    </dl>
-                </div>
             </div>
         </div>
     </header>

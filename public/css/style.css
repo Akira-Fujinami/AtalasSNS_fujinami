@@ -259,9 +259,7 @@ ul.right {
     top: 10px;
 }
 .top-icon {
-    position: relative;
-    top: 30px;
-    margin-left: 95%;
+    margin-left: 0%;
 }
 .others-icon {
     position: relative;
@@ -296,14 +294,14 @@ ul.right {
 .atlas img {
     width: 10%;
     position: relative;
-    top: 75px;
+    top: 60px;
     margin-left: 30px;
 }
 dt:after {
     content: "";
     position: absolute;
-    top: 110px;
-    margin-left: 590px;
+    top: 70px;
+    margin-left: 610px;
     transition: 0.2s;
     display: inline-block;
     width: 8px;
@@ -317,7 +315,7 @@ dt:after {
 dt.open::after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 100px;
+    top: 70px;
 }
 /*  login,index*/
 .username {
@@ -523,11 +521,15 @@ input.post {
 }
 .header-menu {
     display: flex;
+    justify-content: space-between;
 }
 .login-user {
     font-size: 30px;
     color: #fff;
     padding-left: 80%;
+    white-space: nowrap;
+    position: relative;
+    top: 20px;
 }
 .accordion {
     position: absolute;
