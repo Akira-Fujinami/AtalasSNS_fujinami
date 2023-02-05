@@ -67,8 +67,7 @@ header {
     left: 44%;
 }
 .user-image {
-    position: relative;
-    left: 93%;
+    margin-left: 0%;
     top: 25px;
     width: 55px;
     height: 55px;
