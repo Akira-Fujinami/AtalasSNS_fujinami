@@ -526,7 +526,7 @@ input.post {
 .login-user {
     font-size: 30px;
     color: #fff;
-    padding-left: 80%;
+    margin-left: 80%;
     white-space: nowrap;
     position: relative;
     top: 20px;
