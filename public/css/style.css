@@ -293,8 +293,9 @@ ul.right {
 .atlas img {
     width: 10%;
     position: relative;
-    top: 60px;
+    top: 50px;
     margin-left: 30px;
+    cursor: pointer;
 }
 dt:after {
     content: "";
@@ -404,7 +405,7 @@ input.post {
     object-fit: cover;
     border-radius: 1300px;
     position: relative;
-    left: 750%;
+    margin-left: 750%;
     bottom: 10px;
     margin-top: 30px;
 }
