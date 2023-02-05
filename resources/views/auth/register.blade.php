@@ -1,6 +1,6 @@
 @extends('layouts.logout')
 @section('content')
-    <div id="register"></div>
+    <div id="register">
     {!! Form::open(['url' => 'register']) !!}
         <div class="new-register">新規ユーザー登録
         </div>
@@ -43,5 +43,6 @@
         {{ Form::submit('REGISTER',['class'=>'outpter']) }}
         <div class="back-login"><a href="/login">ログイン画面へ戻る</a>
 	    </div>
+	</div>
     {!! Form::close() !!}
 @endsection

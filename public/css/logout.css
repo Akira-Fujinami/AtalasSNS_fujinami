@@ -19,20 +19,18 @@ body {
     margin: auto;
     width: 150px;
     height: 150px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     position: absolute;
     top: 38%;
     left: 40%;
     padding: 100px 90px 140px 40px;
-    opacity: 0.2;
 }
 .login {
     margin: auto;
     width: 150px;
     height: 150px;
-    background: black;
-    opacity: 0.2;
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     position: absolute;
     top: 40%;
@@ -42,38 +40,36 @@ body {
 .mail-address {
     color: #fff;
     position: absolute;
-    left: 41.5%;
-    top: 50%;
+    left: 10%;
+    top: 20%;
 }
 .password-auth {
     color: #fff;
     position: absolute;
-    top: 60%;
-    left: 41.5%;
+    top: 40%;
+    left: 10%;
 }
 #clear {
     margin: auto;
     width: 150px;
     height: 150px;
-    background: black;
-    opacity: 0.4;
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     position: relative;
     top: 150px;
     padding: 50px 60px 50px 60px;
-    opacity: 0.2;
 }
 .added-username {
     position: absolute;
-    left: 48%;
-    margin-top: 25px;
+    left: 45%;
+    margin-top: -10px;
     color: #fff;
     font-weight: bold;
 }
 .added-title {
     position: absolute;
-    left: 44.5%;
-    margin-top: 50px;
+    left: 25%;
+    margin-top: 20px;
     white-space: nowrap;
     font-size: small;
     color: #fff;
@@ -82,14 +78,14 @@ body {
 .added-message {
     white-space: nowrap;
     position: absolute;
-    left: 43.5%;
+    left: 20%;
     margin-top: 115px;
     color: #fff;
 }
 .go-login {
     white-space: nowrap;
     position: absolute;
-    left: 43.5%;
+    left: 20%;
     margin-top: 135px;
     color: #fff;
     letter-spacing: -1px;
@@ -98,8 +94,8 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     position: absolute;
-    left: 41.5%;
-    top: 51%;
+    left: 7%;
+    top: 23%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
@@ -107,76 +103,76 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     position: absolute;
-    left: 41.5%;
-    top: 61%;
+    left: 7%;
+    top: 43%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
 .username {
     display: flex;
     flex-direction: column;
-    margin-top: 170px;
+    margin-top: -40px;
     justify-content: space-between;
     position: absolute;
-    left: 42%;
+    left: 10%;
     color: white;
 }
 .mail {
     display: flex;
     flex-direction: column;
-    margin-top: 240px;
+    margin-top: 30px;
     justify-content: space-between;
     position: absolute;
-    left: 42%;
+    left: 10%;
     color: white;
 }
 .password {
     display: flex;
     flex-direction: column;
-    margin-top: 310px;
+    margin-top: 100px;
     justify-content: space-between;
     position: absolute;
-    left: 42%;
+    left: 10%;
     color: white;
 }
 .password-confirmation {
     display: flex;
     flex-direction: column;
-    margin-top: 380px;
+    margin-top: 170px;
     justify-content: space-between;
     position: absolute;
-    left: 42%;
+    left: 10%;
     color: white;
 }
 .inputer-name {
     border-radius: 5px;
-    margin-top: 185px;
+    margin-top: -20px;
     position: absolute;
-    left: 42%;
+    left: 10%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
 .inputer-mail {
     border-radius: 5px;
-    margin-top: 255px;
+    margin-top: 50px;
     position: absolute;
-    left: 42%;
+    left: 10%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
 .inputer-password {
     border-radius: 5px;
-    margin-top: 325px;
+    margin-top: 120px;
     position: absolute;
-    left: 42%;
+    left: 10%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
 .inputer-confirmation {
     border-radius: 5px;
-    margin-top: 395px;
+    margin-top: 190px;
     position: absolute;
-    left: 42%;
+    left: 10%;
     padding: 5px 58px 5px 0px;
     display: block;
 }
@@ -188,16 +184,16 @@ body {
 p {
     color: white;
     position: absolute;
-    top: 43%;
-    left: 45%;
+    top: 10%;
+    left: 30%;
     font-size: small;
 }
 .output {
     background-color: red;
     border-radius: 5px;
     position: absolute;
-    left: 52.5%;
-    top: 68%;
+    left: 67%;
+    top: 70%;
     padding: 5px 15px 5px 15px;
     color: #fff;
     z-index: 10;
@@ -209,8 +205,8 @@ a {
     padding-right: 10px;
     text-align: center;
     position: absolute;
-    left: 45.5%;
-    margin-top: 70px;
+    left: 27%;
+    margin-top: 140px;
     color: white;
     scale: 0.8;
 }
@@ -219,7 +215,7 @@ a {
     border-radius: 10px;
     position: absolute;
     left: 49.7%;
-    margin-top: 440px;
+    margin-top: 230px;
     cursor: pointer;
     z-index: 2;
     padding: 5px 20px 5px 20px;
@@ -228,7 +224,7 @@ a {
 .register a {
     position: absolute;
     top: 61%;
-    left: 43%;
+    left: 20%;
     white-space: nowrap;
     color: #fff;
     font-size: small;
@@ -236,8 +232,8 @@ a {
 }
 .new-register {
     position: absolute;
-    left: 45%;
-    margin-top: 140px;
+    left: 28%;
+    margin-top: -80px;
     color: white;
 }
 .atlas img {
@@ -248,8 +244,8 @@ a {
 }
 .back-login a {
     position: absolute;
-    left: 44%;
-    margin-top: 490px;
+    left: 22%;
+    margin-top: 240px;
     top: 120px;
     white-space: nowrap;
     z-index: 2;
@@ -264,8 +260,8 @@ a {
 }
 .message-name {
     position: absolute;
-    left: 42%;
-    margin-top: 220px;
+    left: 10%;
+    margin-top: 10px;
     white-space: nowrap;
     color: red;
     font-size: 0.1em;
@@ -273,8 +269,8 @@ a {
 }
 .message-mail {
     position: absolute;
-    left: 42%;
-    margin-top: 290px;
+    left: 10%;
+    margin-top: 80px;
     white-space: nowrap;
     color: red;
     font-size: 0.1em;
@@ -282,8 +278,8 @@ a {
 }
 .message-password {
     position: absolute;
-    left: 42%;
-    margin-top: 360px;
+    left: 10%;
+    margin-top: 150px;
     white-space: nowrap;
     color: red;
     font-size: 0.1em;
@@ -291,8 +287,8 @@ a {
 }
 .message-confirmation {
     position: absolute;
-    left: 42%;
-    margin-top: 430px;
+    left: 10%;
+    margin-top: 220px;
     white-space: nowrap;
     color: red;
     font-size: 0.1em;

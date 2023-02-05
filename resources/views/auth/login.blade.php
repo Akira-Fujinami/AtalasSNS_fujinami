@@ -2,7 +2,6 @@
 @section('content')
     {!! Form::open(['url' => 'login']) !!}
         <div class="login">
-        </div>
         <p>AtlasSNSへようこそ</p>
         {{ Form::label('mail_address','',['class' => 'mail-address']) }}
         {{ Form::text('mail',null,['class' => 'input-mail']) }}
@@ -12,6 +11,7 @@
         <div class="register">
             <a href="/register">新規ユーザーの方はこちら
             </a>
+            </div>
         </div>
     {!! Form::close() !!}
 @endsection
